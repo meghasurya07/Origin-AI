@@ -1,20 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import CTASection from "./components/CTASection";
 
 const BG_VIDEOS = [
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_230229_7c9bc431-46cf-489a-948d-e8144d8eb5d4.mp4",
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_114316_1c7889ad-2885-410e-b493-98119fee0ddb.mp4",
+  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260217_030345_246c0224-10a4-422c-b324-070b7c0eceda.mp4",
 ];
 
-export default function Home() {
-  const [bgVideo, setBgVideo] = useState(BG_VIDEOS[0]);
+function getRandomVideo() {
+  return BG_VIDEOS[Math.floor(Math.random() * BG_VIDEOS.length)];
+}
 
-  useEffect(() => {
-    setBgVideo(BG_VIDEOS[Math.floor(Math.random() * BG_VIDEOS.length)]);
-  }, []);
+export default function Home() {
+  const bgVideo = getRandomVideo();
   return (
     <main className="relative w-full min-h-[115vh] overflow-x-hidden flex flex-col items-center font-sans selection:bg-white/20 selection:text-white">
       {/* ── Fixed Background Video ─────────────────── */}
@@ -25,6 +26,7 @@ export default function Home() {
         muted
         playsInline
         src={bgVideo}
+        suppressHydrationWarning
       />
 
       {/* ── Navbar ────────────────────────────────────── */}
@@ -63,6 +65,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* ── CTA Section ─────────────────────────────── */}
+      <CTASection />
 
       {/* ── Footer (independent, max-w-7xl) ──────────── */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
