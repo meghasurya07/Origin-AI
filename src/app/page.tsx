@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CTASection from "./components/CTASection";
@@ -10,23 +11,25 @@ const BG_VIDEOS = [
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260217_030345_246c0224-10a4-422c-b324-070b7c0eceda.mp4",
 ];
 
-function getRandomVideo() {
-  return BG_VIDEOS[Math.floor(Math.random() * BG_VIDEOS.length)];
-}
-
 export default function Home() {
-  const bgVideo = getRandomVideo();
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.src = BG_VIDEOS[Math.floor(Math.random() * BG_VIDEOS.length)];
+    }
+  }, []);
+
   return (
     <main className="relative w-full min-h-[115vh] overflow-x-hidden flex flex-col items-center font-sans selection:bg-white/20 selection:text-white">
       {/* ── Fixed Background Video ─────────────────── */}
       <video
+        ref={videoRef}
         className="fixed inset-0 w-full h-full object-cover z-[0]"
         autoPlay
         loop
         muted
         playsInline
-        src={bgVideo}
-        suppressHydrationWarning
       />
 
       {/* ── Navbar ────────────────────────────────────── */}
