@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <>
       {/* ── Left: Logo (independent) ───────────────── */}
-      <div className="absolute top-2 sm:top-3 md:top-5 left-2 sm:left-6 md:left-8 z-30 overflow-hidden h-10 sm:h-14 md:h-20 flex items-center">
+      <div className="absolute top-2 sm:top-3 md:top-5 -left-4 sm:-left-1 md:left-0 z-30 overflow-hidden h-10 sm:h-14 md:h-20 flex items-center">
         <Link href="/">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
