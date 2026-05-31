@@ -16,7 +16,9 @@ export default function Home() {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.src = BG_VIDEOS[Math.floor(Math.random() * BG_VIDEOS.length)];
+      const index = Math.floor(Math.random() * BG_VIDEOS.length);
+      videoRef.current.src = BG_VIDEOS[index];
+      videoRef.current.loop = index !== 0;
     }
   }, []);
 
@@ -27,7 +29,6 @@ export default function Home() {
         ref={videoRef}
         className="fixed inset-0 w-full h-full object-cover z-[0]"
         autoPlay
-        loop
         muted
         playsInline
       />
