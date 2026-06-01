@@ -50,26 +50,28 @@ const InstagramIcon = ({ size = 16 }: { size?: number }) => (
   </svg>
 );
 
-const discoverLinks = [
-  "Labs & Workshops",
-  "Deep Dive Series",
-  "Global Circle",
-  "Resource Vault",
-  "Future Roadmap",
+const researchLinks = [
+  "Research Overview",
+  "Research Areas",
+  "Publications",
+  "Technical Reports",
+  "Benchmarks",
 ];
 
-const missionLinks = [
-  "Origin Story",
-  "The Collective",
-  "Newsroom Hub",
-  "Join the Team",
+const companyLinks = [
+  "About",
+  "Mission",
+  "Team",
+  "Careers",
+  "Contact",
 ];
 
-const conciergeLinks = [
-  "Get in Touch",
-  "Legal Privacy",
-  "User Agreement",
-  "Report Concern",
+const safetyLinks = [
+  "Safety Approach",
+  "Transparency",
+  "Research Ethics",
+  "Responsible AI",
+  "Privacy Policy",
 ];
 
 const socialIcons = [
@@ -105,13 +107,13 @@ export default function Footer() {
 
         {/* Links Section */}
         <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-10">
-          {/* Discover */}
+          {/* Research */}
           <div>
             <h4 className="text-sm uppercase tracking-wider text-white font-medium mb-4">
-              Discover
+              Research
             </h4>
             <ul className="space-y-2">
-              {discoverLinks.map((link) => (
+              {researchLinks.map((link) => (
                 <li key={link}>
                   <a
                     href="#"
@@ -124,13 +126,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* The Mission */}
+          {/* Company */}
           <div>
             <h4 className="text-sm uppercase tracking-wider text-white font-medium mb-4">
-              The Mission
+              Company
             </h4>
             <ul className="space-y-2">
-              {missionLinks.map((link) => (
+              {companyLinks.map((link) => (
                 <li key={link}>
                   <a
                     href="#"
@@ -143,13 +145,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Concierge */}
+          {/* Safety & Governance */}
           <div>
             <h4 className="text-sm uppercase tracking-wider text-white font-medium mb-4">
-              Concierge
+              Safety & Governance
             </h4>
             <ul className="space-y-2">
-              {conciergeLinks.map((link) => (
+              {safetyLinks.map((link) => (
                 <li key={link}>
                   <a
                     href="#"
