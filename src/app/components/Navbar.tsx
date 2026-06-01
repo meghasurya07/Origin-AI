@@ -26,6 +26,8 @@ export default function Navbar() {
           <img
             src="/Origin AI.png"
             alt="Origin AI"
+            width="600"
+            height="400"
             className="h-28 sm:h-36 md:h-48 w-auto -my-4 sm:-my-6 md:-my-8"
           />
         </Link>

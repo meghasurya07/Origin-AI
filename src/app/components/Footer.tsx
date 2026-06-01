@@ -97,6 +97,8 @@ export default function Footer() {
             <img
               src="/Origin AI.png"
               alt="Origin AI"
+              width="600"
+              height="400"
               className="h-40 w-auto -mt-14 -ml-14"
             />
           </div>
@@ -109,9 +111,9 @@ export default function Footer() {
         <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-10">
           {/* Research */}
           <div>
-            <h4 className="text-sm uppercase tracking-wider text-white font-medium mb-4">
+            <h3 className="text-sm uppercase tracking-wider text-white font-medium mb-4">
               Research
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {researchLinks.map((link) => (
                 <li key={link}>
@@ -128,9 +130,9 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="text-sm uppercase tracking-wider text-white font-medium mb-4">
+            <h3 className="text-sm uppercase tracking-wider text-white font-medium mb-4">
               Company
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {companyLinks.map((link) => (
                 <li key={link}>
@@ -147,9 +149,9 @@ export default function Footer() {
 
           {/* Safety & Governance */}
           <div>
-            <h4 className="text-sm uppercase tracking-wider text-white font-medium mb-4">
+            <h3 className="text-sm uppercase tracking-wider text-white font-medium mb-4">
               Safety & Governance
-            </h4>
+            </h3>
             <ul className="space-y-2">
               {safetyLinks.map((link) => (
                 <li key={link}>
