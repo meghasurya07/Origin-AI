@@ -5,7 +5,8 @@
   font-family: "Helvetica Regular";
   font-display: swap;
   src: url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.eot");
-  src: url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.eot?#iefix")
+  src:
+    url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.eot?#iefix")
       format("embedded-opentype"),
     url("https://db.onlinewebfonts.com/t/a64ff11d2c24584c767f6257e880dc65.woff2")
       format("woff2"),
@@ -23,15 +24,23 @@
 }
 
 * {
-  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family:
+    var(--font-geist-sans),
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
 
 .font-helvetica {
-  font-family: "Helvetica Regular", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family:
+    "Helvetica Regular",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
 
 /* Use dvh (dynamic viewport height) on mobile to account for browser chrome */
@@ -84,9 +93,11 @@ button {
     rgba(255, 255, 255, 0.15) 80%,
     rgba(255, 255, 255, 0.45) 100%
   );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box,
+  mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;

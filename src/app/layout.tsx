@@ -10,9 +10,9 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Origin AI – Pioneering the Future of Artificial Intelligence",
+  title: "Origin – Pioneering the Future of Autonomous Aerospace Systems",
   description:
-    "Origin AI is dedicated to developing the next generation of intelligent systems through cutting-edge AI research, products, and publications — while ensuring their benefits are widely accessible.",
+    "Origin develops autonomous aerospace systems designed for long-endurance missions, persistent intelligence, and next-generation aerial operations — delivering continuous presence where traditional aircraft and satellites fall short.",
 };
 
 export default function RootLayout({

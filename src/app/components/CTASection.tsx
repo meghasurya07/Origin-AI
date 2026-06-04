@@ -54,7 +54,7 @@ export default function CTASection() {
       className="relative z-10 w-full flex flex-col items-center justify-center text-center px-4 mt-32 md:mt-64"
     >
       <h2 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight mb-8 md:mb-10">
-        Pure Insight. Zero Noise.
+        Pure Insight. Zero Noise. <br className="hidden sm:block" />
       </h2>
 
       <form
