@@ -10,7 +10,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Origin – Pioneering the Future of Autonomous Aerospace Systems",
+  title: "Origin",
   description:
     "Origin develops autonomous aerospace systems designed for long-endurance missions, persistent intelligence, and next-generation aerial operations — delivering continuous presence where traditional aircraft and satellites fall short.",
 };
