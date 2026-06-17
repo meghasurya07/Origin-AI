@@ -10,7 +10,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Origin AI – Pioneering the Future of Artificial Intelligence",
+  title: "Origin AI",
   description:
     "Origin AI is dedicated to developing the next generation of intelligent systems through cutting-edge AI research, products, and publications — while ensuring their benefits are widely accessible.",
 };
