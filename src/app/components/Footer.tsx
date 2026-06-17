@@ -50,12 +50,12 @@ const InstagramIcon = ({ size = 16 }: { size?: number }) => (
   </svg>
 );
 
-const technologyLinks = [
-  "Flight Systems",
-  "Autonomous Navigation",
-  "Mission Control",
-  "Energy Systems",
-  "Platform Architecture",
+const researchLinks = [
+  "Research Overview",
+  "Research Areas",
+  "Publications",
+  "Technical Reports",
+  "Benchmarks",
 ];
 
 const companyLinks = [
@@ -96,26 +96,26 @@ export default function Footer() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/Origin AI.png"
-              alt="Origin"
+              alt="Origin AI"
               width="600"
               height="400"
               className="h-40 w-auto -mt-14 -ml-14"
             />
           </div>
           <p className="text-sm leading-relaxed max-w-sm">
-            Origin develops autonomous aerospace systems designed for long-endurance missions, persistent intelligence, and next-generation aerial operations.
+            Origin AI is dedicated to developing the next generation of intelligent systems while ensuring their benefits are widely accessible.
           </p>
         </div>
 
         {/* Links Section */}
         <div className="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-8 md:gap-10">
-          {/* Technology */}
+          {/* Research */}
           <div>
             <h3 className="text-sm uppercase tracking-wider text-white font-medium mb-4">
-              Technology
+              Research
             </h3>
             <ul className="space-y-2">
-              {technologyLinks.map((link) => (
+              {researchLinks.map((link) => (
                 <li key={link}>
                   <a
                     href="#"
@@ -171,7 +171,7 @@ export default function Footer() {
       {/* ── Bottom Bar ────────────────────────────────── */}
       <div className="pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-4">
         <p className="text-[10px] uppercase tracking-widest opacity-50">
-          © 2026 Origin. All rights reserved.
+          © 2026 Origin AI. All rights reserved.
         </p>
 
         <div className="flex items-center gap-4">

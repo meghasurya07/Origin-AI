@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Technology", href: "/technology" },
-  { label: "Programs", href: "/programs", dropdown: true },
+  { label: "Research", href: "/research" },
+  { label: "Products", href: "/products", dropdown: true },
   { label: "News", href: "/news" },
   { label: "About", href: "/about" },
   { label: "Careers", href: "/careers" },
@@ -25,7 +25,7 @@ export default function Navbar() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/Origin AI.png"
-            alt="Origin"
+            alt="Origin AI"
             width="600"
             height="400"
             className="h-28 sm:h-36 md:h-48 w-auto -my-4 sm:-my-6 md:-my-8"
@@ -61,10 +61,10 @@ export default function Navbar() {
       {/* ── Right: CTA + Mobile toggle (independent) ── */}
       <div className="absolute top-2 sm:top-3 md:top-5 right-2 sm:right-6 md:right-8 z-30 flex items-center gap-2 sm:gap-3">
         <Link
-          href="/technology"
+          href="/try-origin"
           className="hidden md:block bg-white text-black text-xs lg:text-sm font-medium px-3 lg:px-4 py-2 lg:py-2.5 rounded-full hover:bg-white/90 transition-colors whitespace-nowrap"
         >
-          Explore Technology
+          Try Origin
         </Link>
 
         <button
@@ -104,11 +104,11 @@ export default function Navbar() {
 
               <div className="flex gap-2 mt-1.5 sm:mt-2 pt-2.5 sm:pt-3 border-t border-white/10">
                 <Link
-                  href="/technology"
+                  href="/try-origin"
                   className="flex-1 text-center bg-white text-black text-sm font-medium px-4 py-2.5 rounded-full hover:bg-white/90 transition-colors"
                   onClick={() => setMenuOpen(false)}
                 >
-                  Explore Technology
+                  Try Origin
                 </Link>
               </div>
             </div>

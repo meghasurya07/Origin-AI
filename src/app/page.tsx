@@ -47,11 +47,11 @@ export default function Home() {
             <p className="flex items-center gap-3 text-xs sm:text-sm uppercase tracking-[0.2em] font-medium mb-3 sm:mb-4">
               <span className="w-10 sm:w-14 h-[2px] rounded-full bg-[linear-gradient(90deg,transparent,#fbbf24_40%,#f97316)] shadow-[0_0_8px_1px_rgba(251,191,36,0.4)]" />
               <span className="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent">
-                Pioneering the future of Aerospace
+                Pioneering the future of AI
               </span>
             </p>
             <h1 className="text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.15] sm:leading-[1.1] md:leading-[1.08] tracking-tight">
-              Autonomous aerospace systems that redefine persistence at the{" "}
+              AI research and products that advance intelligence at the{" "}
               <span className="bg-[linear-gradient(90deg,#0ea5e9,#7dd3fc,#0ea5e9)] bg-clip-text text-transparent">
                 frontier
               </span>
@@ -61,10 +61,10 @@ export default function Home() {
           {/* Paragraph */}
           <div className="lg:max-w-md">
             <p className="text-white/70 text-xs sm:text-sm lg:text-lg leading-relaxed max-w-lg lg:max-w-none">
-              The future of aerospace is autonomous, persistent, and
-              intelligent. Origin is building next-generation aerial platforms
-              capable of delivering continuous presence where traditional
-              aircraft and satellites fall short.
+              AI will transform every industry and every aspect of human life.
+              Origin AI is dedicated to developing the next generation of
+              intelligent systems while ensuring their benefits are widely
+              accessible.
             </p>
           </div>
         </div>
