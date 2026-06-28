@@ -40,7 +40,7 @@ export default function Home() {
       <div className="fixed inset-x-0 bottom-0 h-2/3 lg:h-1/2 bg-gradient-to-t from-black/90 via-black/50 to-transparent z-[1] pointer-events-none" />
 
       {/* ── Hero Content (independent, full-width) ───── */}
-      <div className="relative z-10 w-full h-screen min-h-[500px] flex flex-col justify-end px-4 sm:px-8 md:px-12 lg:px-16 pb-10 sm:pb-14 md:pb-14 lg:pb-16 pt-20">
+      <div className="relative z-10 w-full h-[100dvh] min-h-[480px] flex flex-col justify-end px-4 sm:px-8 md:px-12 lg:px-16 pb-6 sm:pb-14 md:pb-14 lg:pb-16 pt-20">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 sm:gap-5 lg:gap-16">
           {/* Headline */}
           <div className="lg:max-w-[55%] shrink-0">
