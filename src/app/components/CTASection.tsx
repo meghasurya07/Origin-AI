@@ -59,7 +59,7 @@ export default function CTASection() {
 
       <form
         onSubmit={handleSubmit}
-        className="liquid-glass flex items-center w-full max-w-xl sm:max-w-2xl rounded-full pl-6 pr-1.5 py-1.5"
+        className="liquid-glass flex items-center w-full max-w-xl sm:max-w-2xl rounded-full pl-3 sm:pl-6 pr-1.5 py-1.5"
       >
         <input
           type="email"
