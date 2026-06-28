@@ -73,7 +73,7 @@ export default function CTASection() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className={`text-xs sm:text-sm font-bold uppercase tracking-[0.15em] px-6 sm:px-8 py-3 sm:py-3.5 rounded-full transition-all whitespace-nowrap disabled:opacity-50 ${
+          className={`text-xs sm:text-sm font-bold uppercase tracking-[0.05em] sm:tracking-[0.15em] px-4 sm:px-8 py-3 sm:py-3.5 rounded-full transition-all whitespace-nowrap disabled:opacity-50 ${
             status === "success"
               ? "bg-emerald-500/60 text-white"
               : status === "error"
