@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
 
 const XIcon = ({ size = 16 }: { size?: number }) => (
@@ -51,27 +52,27 @@ const InstagramIcon = ({ size = 16 }: { size?: number }) => (
 );
 
 const researchLinks = [
-  "Research Overview",
-  "Research Areas",
-  "Publications",
-  "Technical Reports",
-  "Benchmarks",
+  { label: "Research Overview", href: "/research" },
+  { label: "Research Areas", href: "/research/areas" },
+  { label: "Publications", href: "/publications" },
+  { label: "Technical Reports", href: "/reports" },
+  { label: "Benchmarks", href: "/benchmarks" },
 ];
 
 const companyLinks = [
-  "About",
-  "Mission",
-  "Team",
-  "Careers",
-  "Contact",
+  { label: "About", href: "/about" },
+  { label: "Mission", href: "/about" },
+  { label: "Team", href: "/about" },
+  { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const safetyLinks = [
-  "Safety Approach",
-  "Transparency",
-  "Research Ethics",
-  "Responsible AI",
-  "Privacy Policy",
+  { label: "Safety Approach", href: "/safety" },
+  { label: "Transparency", href: "/transparency" },
+  { label: "Research Ethics", href: "/ethics" },
+  { label: "Responsible AI", href: "/responsible-ai" },
+  { label: "Privacy Policy", href: "/privacy" },
 ];
 
 const socialIcons = [
@@ -116,13 +117,13 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               {researchLinks.map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
                     className="text-xs hover:text-white transition-colors"
                   >
-                    {link}
-                  </a>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -135,13 +136,13 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               {companyLinks.map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
                     className="text-xs hover:text-white transition-colors"
                   >
-                    {link}
-                  </a>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -154,13 +155,13 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2">
               {safetyLinks.map((link) => (
-                <li key={link}>
-                  <a
-                    href="#"
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
                     className="text-xs hover:text-white transition-colors"
                   >
-                    {link}
-                  </a>
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
