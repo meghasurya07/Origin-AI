@@ -117,12 +117,11 @@ export default function Footer() {
             <ul className="space-y-2">
               {researchLinks.map((link) => (
                 <li key={link}>
-                  <a
-                    href="#"
-                    className="text-xs hover:text-white transition-colors"
+                  <span
+                    className="text-xs cursor-default select-none"
                   >
                     {link}
-                  </a>
+                  </span>
                 </li>
               ))}
             </ul>
@@ -136,12 +135,11 @@ export default function Footer() {
             <ul className="space-y-2">
               {companyLinks.map((link) => (
                 <li key={link}>
-                  <a
-                    href="#"
-                    className="text-xs hover:text-white transition-colors"
+                  <span
+                    className="text-xs cursor-default select-none"
                   >
                     {link}
-                  </a>
+                  </span>
                 </li>
               ))}
             </ul>
@@ -155,12 +153,11 @@ export default function Footer() {
             <ul className="space-y-2">
               {safetyLinks.map((link) => (
                 <li key={link}>
-                  <a
-                    href="#"
-                    className="text-xs hover:text-white transition-colors"
+                  <span
+                    className="text-xs cursor-default select-none"
                   >
                     {link}
-                  </a>
+                  </span>
                 </li>
               ))}
             </ul>
