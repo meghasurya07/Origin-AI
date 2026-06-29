@@ -50,19 +50,12 @@ export default function AboutPage() {
               About Origin AI
             </span>
           </p>
-          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight mb-6">
+          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight">
             Building the future of{" "}
             <span className="bg-[linear-gradient(90deg,#0ea5e9,#7dd3fc,#0ea5e9)] bg-clip-text text-transparent">
               intelligence
             </span>
           </h1>
-          <p className="text-white/60 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl">
-            Origin AI is on a mission to build safe, general-purpose artificial
-            intelligence. We believe India can lead the global AI race — not
-            just participate in it. We&apos;re building foundational AI systems
-            that will transform industries and push the boundaries of what
-            machines can do.
-          </p>
         </motion.div>
       </section>
 
@@ -78,12 +71,7 @@ export default function AboutPage() {
             Our Mission
           </h2>
           <p className="text-white/60 text-sm sm:text-base leading-relaxed mb-6">
-            The race to artificial general intelligence will define the next era
-            of human progress. Origin AI exists to ensure that India has a seat
-            at the table — not as a follower, but as a leader. We&apos;re
-            building the research, the models, and the products that will
-            compete at the frontier alongside the world&apos;s most ambitious AI
-            labs.
+            The race to AGI will define human progress, and Origin AI exists to ensure India leads this frontier rather than follows it. We are building safe, general-purpose intelligence and foundational models to transform industries and push the boundaries of what is possible, competing directly with the world&apos;s most ambitious labs.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             {[
