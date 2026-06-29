@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -15,7 +15,13 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const nextPathname = usePathname();
+  const [pathname, setPathname] = useState(nextPathname);
+
+  useEffect(() => {
+    // On 404 pages, usePathname() may not reflect the actual URL on Vercel
+    setPathname(window.location.pathname);
+  }, []);
 
   return (
     <>
