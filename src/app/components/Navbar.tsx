@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -14,11 +15,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activePath, setActivePath] = useState("");
-
-  useEffect(() => {
-    setActivePath(window.location.pathname);
-  }, []);
+  const pathname = usePathname();
 
   return (
     <>
@@ -40,7 +37,7 @@ export default function Navbar() {
       <div className="hidden md:flex absolute top-5 left-1/2 -translate-x-1/2 z-30">
         <div className="liquid-glass flex items-center gap-0.5 lg:gap-1 rounded-xl px-1.5 lg:px-2 py-1.5 lg:py-2">
           {navLinks.map((link) => {
-            const isActive = activePath === link.href;
+            const isActive = pathname === link.href;
             return (
               <Link
                 key={link.label}
