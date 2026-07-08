@@ -59,7 +59,7 @@ export default function NotFound() {
           className="liquid-glass rounded-2xl px-8 sm:px-12 py-8 sm:py-10 -mt-6 sm:-mt-8 max-w-lg"
         >
           <h1 className="text-white text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight mb-3 sm:mb-4">
-            Uh oh, you&apos;re off the map.
+            Whoops! Nothing here yet
           </h1>
           <p className="text-white/60 text-sm sm:text-base leading-relaxed mb-8">
             This page has either been moved, removed, or is still under
