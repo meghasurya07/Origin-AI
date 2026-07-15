@@ -3,7 +3,7 @@
 import { useRef, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-// import SupportedBy from "./components/SupportedBy";
+import SupportedBy from "./components/SupportedBy";
 import CTASection from "./components/CTASection";
 
 const BG_VIDEOS = [
@@ -72,7 +72,7 @@ export default function Home() {
       </div>
 
       {/* ── Supported By ──────────────────────────── */}
-      {/* <SupportedBy /> */}
+      <SupportedBy />
 
       {/* ── CTA Section ─────────────────────────────── */}
       <CTASection />
