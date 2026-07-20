@@ -10,10 +10,24 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Origin AI",
+  title: {
+    default: "Origin AI",
+    template: "%s",
+  },
   description:
     "AI research and products that advance intelligence at the frontier. Origin AI is dedicated to developing the next generation of intelligent systems while ensuring their benefits are widely accessible.",
   metadataBase: new URL("https://originai.in"),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "Origin AI",
     description:
@@ -38,6 +52,52 @@ export const metadata: Metadata = {
       "AI research and products that advance intelligence at the frontier.",
     images: ["/og-image.png"],
   },
+  alternates: {
+    canonical: "https://originai.in",
+  },
+  icons: {
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
+  manifest: "/manifest.json",
+};
+
+// Organization structured data
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Origin AI",
+  url: "https://originai.in",
+  logo: "https://originai.in/og-image.png",
+  description:
+    "AI research and products that advance intelligence at the frontier.",
+  foundingDate: "2025",
+  founders: [
+    {
+      "@type": "Person",
+      name: "Megha Surya Bodepudi",
+      jobTitle: "Co-Founder",
+    },
+    {
+      "@type": "Person",
+      name: "Mahesh Bodepudi",
+      jobTitle: "Co-Founder",
+    },
+  ],
+  sameAs: [
+    "https://x.com",
+    "https://linkedin.com",
+    "https://instagram.com",
+    "https://youtube.com",
+    "https://discord.gg",
+  ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Origin AI",
+  url: "https://originai.in",
 };
 
 export default function RootLayout({
@@ -47,7 +107,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
-      <body>{children}</body>
+      <body className="bg-black">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

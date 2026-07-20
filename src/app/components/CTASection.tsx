@@ -61,12 +61,17 @@ export default function CTASection() {
         onSubmit={handleSubmit}
         className="liquid-glass flex items-center w-full max-w-xl sm:max-w-2xl rounded-full pl-3 sm:pl-6 pr-1.5 py-1.5"
       >
+        <label htmlFor="cta-email" className="sr-only">
+          Email address
+        </label>
         <input
+          id="cta-email"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Your favorite email?"
           required
+          autoComplete="email"
           disabled={status === "loading"}
           className="flex-1 bg-transparent text-white text-sm sm:text-base placeholder:text-white/40 outline-none border-none py-2 disabled:opacity-50"
         />

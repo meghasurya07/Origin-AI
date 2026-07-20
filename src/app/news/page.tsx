@@ -89,9 +89,9 @@ export default function NewsPage() {
                 <div className="liquid-glass rounded-2xl p-6 sm:p-8 md:p-10 hover:bg-white/[0.04] transition-colors duration-300">
                   {/* Meta row */}
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-[10px] sm:text-xs uppercase tracking-widest text-white/40">
+                    <time dateTime="2026-07" className="text-[10px] sm:text-xs uppercase tracking-widest text-white/40">
                       {item.date}
-                    </span>
+                    </time>
                     <span className="w-1 h-1 rounded-full bg-white/20" />
                     <span className="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent text-[10px] sm:text-xs uppercase tracking-widest font-medium">
                       {item.tag}

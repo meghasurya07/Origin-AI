@@ -77,9 +77,9 @@ export default function GradCapitalGrantArticle() {
         >
           {/* Meta */}
           <div className="flex items-center gap-3 mb-5">
-            <span className="text-[10px] sm:text-xs uppercase tracking-widest text-white/40">
+            <time dateTime="2026-07" className="text-[10px] sm:text-xs uppercase tracking-widest text-white/40">
               July 2026
-            </span>
+            </time>
             <span className="w-1 h-1 rounded-full bg-white/20" />
             <span className="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent text-[10px] sm:text-xs uppercase tracking-widest font-medium">
               Funding

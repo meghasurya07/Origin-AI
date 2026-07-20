@@ -34,7 +34,7 @@ export default function Navbar() {
       </div>
 
       {/* ── Center: Nav pill (independent) ─────────── */}
-      <div className="hidden md:flex absolute top-5 left-1/2 -translate-x-1/2 z-30">
+      <nav aria-label="Main navigation" className="hidden md:flex absolute top-5 left-1/2 -translate-x-1/2 z-30">
         <div className="liquid-glass flex items-center gap-0.5 lg:gap-1 rounded-xl px-1.5 lg:px-2 py-1.5 lg:py-2">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
@@ -56,7 +56,7 @@ export default function Navbar() {
             );
           })}
         </div>
-      </div>
+      </nav>
 
       {/* ── Right: CTA + Mobile toggle (independent) ── */}
       <div className="absolute top-2 sm:top-3 md:top-5 right-2 sm:right-6 md:right-8 z-30 flex items-center gap-2 sm:gap-3">
