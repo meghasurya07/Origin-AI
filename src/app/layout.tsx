@@ -12,7 +12,32 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "Origin AI",
   description:
-    "Origin AI is dedicated to developing the next generation of intelligent systems through cutting-edge AI research, products, and publications — while ensuring their benefits are widely accessible.",
+    "AI research and products that advance intelligence at the frontier. Origin AI is dedicated to developing the next generation of intelligent systems while ensuring their benefits are widely accessible.",
+  metadataBase: new URL("https://originai.in"),
+  openGraph: {
+    title: "Origin AI",
+    description:
+      "AI research and products that advance intelligence at the frontier.",
+    url: "https://originai.in",
+    siteName: "Origin AI",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Origin AI",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Origin AI",
+    description:
+      "AI research and products that advance intelligence at the frontier.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
