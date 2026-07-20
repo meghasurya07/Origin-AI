@@ -54,6 +54,31 @@ const jsonLd = {
   },
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://originai.in",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "News",
+      item: "https://originai.in/news",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Feather Grant from Grad Capital",
+      item: "https://originai.in/news/grad-capital-feather-grant",
+    },
+  ],
+};
+
 export default function ArticleLayout({
   children,
 }: {
@@ -64,6 +89,10 @@ export default function ArticleLayout({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       {children}
     </>

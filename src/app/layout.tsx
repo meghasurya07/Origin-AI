@@ -98,6 +98,33 @@ const websiteJsonLd = {
   "@type": "WebSite",
   name: "Origin AI",
   url: "https://originai.in",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://originai.in/?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
+
+// SiteNavigationElement — tells Google which pages matter for sitelinks
+const navigationJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SiteNavigationElement",
+      name: "About",
+      url: "https://originai.in/about",
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "Careers",
+      url: "https://originai.in/careers",
+    },
+    {
+      "@type": "SiteNavigationElement",
+      name: "News",
+      url: "https://originai.in/news",
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -118,6 +145,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(websiteJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(navigationJsonLd),
           }}
         />
         {children}
