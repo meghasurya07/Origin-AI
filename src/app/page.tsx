@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import SupportedBy from "./components/SupportedBy";
@@ -32,6 +33,7 @@ export default function Home() {
         autoPlay
         muted
         playsInline
+        preload="metadata"
       />
 
       {/* ── Navbar ────────────────────────────────────── */}
@@ -67,6 +69,28 @@ export default function Home() {
               intelligent systems while ensuring their benefits are widely
               accessible.
             </p>
+            <div className="flex items-center gap-4 mt-4 lg:mt-5">
+              <Link
+                href="/about"
+                className="text-white/50 hover:text-white text-xs sm:text-sm transition-colors underline underline-offset-2 decoration-white/20 hover:decoration-white/50"
+              >
+                Our Mission
+              </Link>
+              <span className="w-1 h-1 rounded-full bg-white/20" />
+              <Link
+                href="/news"
+                className="text-white/50 hover:text-white text-xs sm:text-sm transition-colors underline underline-offset-2 decoration-white/20 hover:decoration-white/50"
+              >
+                Latest News
+              </Link>
+              <span className="w-1 h-1 rounded-full bg-white/20" />
+              <Link
+                href="/careers"
+                className="text-white/50 hover:text-white text-xs sm:text-sm transition-colors underline underline-offset-2 decoration-white/20 hover:decoration-white/50"
+              >
+                Careers
+              </Link>
+            </div>
           </div>
         </div>
       </div>

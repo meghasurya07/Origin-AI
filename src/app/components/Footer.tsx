@@ -86,26 +86,18 @@ const DiscordIcon = ({ size = 16 }: { size?: number }) => (
 
 const researchLinks = [
   { label: "Research Overview", href: "/research" },
-  { label: "Research Areas", href: "/research/areas" },
-  { label: "Publications", href: "/publications" },
-  { label: "Technical Reports", href: "/reports" },
-  { label: "Benchmarks", href: "/benchmarks" },
+  { label: "News & Updates", href: "/news" },
 ];
 
 const companyLinks = [
   { label: "About", href: "/about" },
-  { label: "Mission", href: "/about" },
-  { label: "Team", href: "/about" },
   { label: "Careers", href: "/careers" },
-  { label: "Contact", href: "/contact" },
+  { label: "News", href: "/news" },
 ];
 
 const safetyLinks = [
-  { label: "Safety Approach", href: "/safety" },
-  { label: "Transparency", href: "/transparency" },
-  { label: "Research Ethics", href: "/ethics" },
-  { label: "Responsible AI", href: "/responsible-ai" },
-  { label: "Privacy Policy", href: "/privacy" },
+  { label: "About Us", href: "/about" },
+  { label: "Careers", href: "/careers" },
 ];
 
 const socialIcons = [
