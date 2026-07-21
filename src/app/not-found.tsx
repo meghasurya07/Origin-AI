@@ -31,7 +31,6 @@ export default function NotFound() {
         autoPlay
         muted
         playsInline
-        preload="metadata"
       />
 
       {/* ── Dark overlay ─────────────────────── */}

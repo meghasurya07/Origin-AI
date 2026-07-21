@@ -43,7 +43,6 @@ export default function NewsPage() {
         autoPlay
         muted
         playsInline
-        preload="metadata"
       />
       <div className="fixed inset-0 bg-black/70 z-[1]" />
 
