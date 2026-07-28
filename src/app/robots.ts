@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://originai.in/sitemap.xml",
+    sitemap: "https://www.originai.in/sitemap.xml",
   };
 }

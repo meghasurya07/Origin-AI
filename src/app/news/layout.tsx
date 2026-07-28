@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "News — Origin AI",
     description:
       "Latest announcements, research updates, and milestones from Origin AI.",
-    url: "https://originai.in/news",
+    url: "https://www.originai.in/news",
   },
   twitter: {
     title: "News — Origin AI",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Latest announcements, research updates, and milestones from Origin AI.",
   },
   alternates: {
-    canonical: "https://originai.in/news",
+    canonical: "https://www.originai.in/news",
   },
 };
 
@@ -28,13 +28,13 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://originai.in",
+      item: "https://www.originai.in",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "News",
-      item: "https://originai.in/news",
+      item: "https://www.originai.in/news",
     },
   ],
 };

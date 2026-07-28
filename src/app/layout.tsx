@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   description:
     "AI research and products that advance intelligence at the frontier. Origin AI is dedicated to developing the next generation of intelligent systems while ensuring their benefits are widely accessible.",
-  metadataBase: new URL("https://originai.in"),
+  metadataBase: new URL("https://www.originai.in"),
   robots: {
     index: true,
     follow: true,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Origin AI",
     description:
       "AI research and products that advance intelligence at the frontier.",
-    url: "https://originai.in",
+    url: "https://www.originai.in",
     siteName: "Origin AI",
     images: [
       {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://originai.in",
+    canonical: "https://www.originai.in",
   },
   icons: {
     icon: "/icon.png",
@@ -67,8 +67,8 @@ const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Origin AI",
-  url: "https://originai.in",
-  logo: "https://originai.in/og-image.png",
+  url: "https://www.originai.in",
+  logo: "https://www.originai.in/og-image.png",
   description:
     "AI research and products that advance intelligence at the frontier.",
   foundingDate: "2025",
@@ -97,10 +97,10 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "Origin AI",
-  url: "https://originai.in",
+  url: "https://www.originai.in",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://originai.in/?q={search_term_string}",
+    target: "https://www.originai.in/?q={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 };
@@ -112,17 +112,17 @@ const navigationJsonLd = {
     {
       "@type": "SiteNavigationElement",
       name: "About",
-      url: "https://originai.in/about",
+      url: "https://www.originai.in/about",
     },
     {
       "@type": "SiteNavigationElement",
       name: "Careers",
-      url: "https://originai.in/careers",
+      url: "https://www.originai.in/careers",
     },
     {
       "@type": "SiteNavigationElement",
       name: "News",
-      url: "https://originai.in/news",
+      url: "https://www.originai.in/news",
     },
   ],
 };

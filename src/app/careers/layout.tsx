@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "Careers — Origin AI",
     description:
       "Join Origin AI and help build the future of artificial general intelligence.",
-    url: "https://originai.in/careers",
+    url: "https://www.originai.in/careers",
   },
   twitter: {
     title: "Careers — Origin AI",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Join Origin AI and help build the future of artificial general intelligence.",
   },
   alternates: {
-    canonical: "https://originai.in/careers",
+    canonical: "https://www.originai.in/careers",
   },
 };
 
@@ -28,13 +28,13 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://originai.in",
+      item: "https://www.originai.in",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Careers",
-      item: "https://originai.in/careers",
+      item: "https://www.originai.in/careers",
     },
   ],
 };

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: "About — Origin AI",
     description:
       "Learn about Origin AI's mission to build safe, general-purpose artificial intelligence from India.",
-    url: "https://originai.in/about",
+    url: "https://www.originai.in/about",
   },
   twitter: {
     title: "About — Origin AI",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Learn about Origin AI's mission to build safe, general-purpose artificial intelligence from India.",
   },
   alternates: {
-    canonical: "https://originai.in/about",
+    canonical: "https://www.originai.in/about",
   },
 };
 
@@ -28,13 +28,13 @@ const breadcrumbJsonLd = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://originai.in",
+      item: "https://www.originai.in",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "About",
-      item: "https://originai.in/about",
+      item: "https://www.originai.in/about",
     },
   ],
 };
