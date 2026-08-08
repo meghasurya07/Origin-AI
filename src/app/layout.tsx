@@ -98,11 +98,6 @@ const websiteJsonLd = {
   "@type": "WebSite",
   name: "Origin AI",
   url: "https://www.originai.in",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://www.originai.in/?q={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
 };
 
 // SiteNavigationElement — tells Google which pages matter for sitelinks
