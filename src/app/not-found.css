@@ -1,0 +1,161 @@
+/* ── Custom Font ──────────────────────────── */
+@font-face {
+  font-family: "Geist Mono:SemiBold";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("https://static.figma.com/font/GeistMono_wght__1") format("woff2");
+}
+
+/* ── Header Logo ─────────────────────────── */
+.nf-logo {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  width: 233px;
+  height: 40px;
+  gap: 14px;
+}
+
+.nf-mark {
+  width: 54px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.nf-logotype {
+  /* The logotype viewBox is 164.311 x 100, but the visible content is roughly
+     in the y-range 34–57 (height ~23). Scale so the logotype height matches
+     the mark height visually within the 40px frame. */
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+/* ── Centered 404 Content ────────────────── */
+.nf-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 483px;
+  gap: 14px;
+}
+
+/* ── 404 Heading ─────────────────────────── */
+.nf-heading {
+  font-family: "Geist Mono:SemiBold", monospace;
+  font-size: 295.751px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -24.6459px;
+  height: auto;
+  min-height: 0;
+  padding-bottom: 0.05em;
+  background: linear-gradient(
+    247.33deg,
+    rgb(255, 255, 255) 2.53%,
+    rgba(255, 255, 255, 0.4) 93.61%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin: 0;
+}
+
+/* ── Divider ─────────────────────────────── */
+.nf-divider {
+  width: 425px;
+  height: 1px;
+  background: white;
+  flex-shrink: 0;
+}
+
+/* ── Message ─────────────────────────────── */
+.nf-message {
+  font-family: "Geist Mono:SemiBold", monospace;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  color: white;
+  margin: 0;
+}
+
+/* ── Buttons ─────────────────────────────── */
+.nf-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.nf-btn {
+  font-family: "Geist Mono:SemiBold", monospace;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  padding: 10px 28px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  text-decoration: none;
+  background: white;
+  color: black;
+  border: none;
+}
+
+.nf-btn:hover {
+  opacity: 0.85;
+}
+
+.nf-btn-outline {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.nf-btn-outline:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+}
+
+/* ── Responsive: Mobile ──────────────────── */
+@media (max-width: 640px) {
+  .nf-logo {
+    top: 32px;
+    transform: translateX(-50%) scale(0.75);
+  }
+
+  .nf-content {
+    width: min(calc(100% - 40px), 360px);
+    gap: 10px;
+  }
+
+  .nf-heading {
+    font-size: clamp(140px, 52vw, 200px);
+    letter-spacing: -0.09em;
+    height: auto;
+    min-height: 0;
+    padding-bottom: 0.05em;
+  }
+
+  .nf-divider {
+    width: 100%;
+  }
+
+  .nf-message {
+    font-size: clamp(16px, 4.5vw, 20px);
+    letter-spacing: -1.3px;
+  }
+}
