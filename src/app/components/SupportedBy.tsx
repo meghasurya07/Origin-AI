@@ -22,18 +22,18 @@ export default function SupportedBy() {
       {/* Logo card */}
       <div className="flex items-center justify-center gap-8 sm:gap-12">
         <a
-          href="https://www.gradcapital.in"
+          href="https://www.sarvam.ai"
           target="_blank"
           rel="noopener noreferrer"
-          className="group liquid-glass rounded-2xl px-8 sm:px-12 py-5 sm:py-6 hover:bg-white/[0.08] transition-all duration-300"
+          className="group liquid-glass rounded-2xl px-8 sm:px-12 py-5 sm:py-6 hover:bg-white/[0.08] transition-all duration-300 flex items-center justify-center"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/gradcapital_logo.png"
-            alt="Grad Capital"
-            width="200"
-            height="200"
-            className="h-24 sm:h-28 md:h-[120px] w-auto opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+            src="/sarvam_logo.svg"
+            alt="Sarvam AI"
+            width="120"
+            height="120"
+            className="h-20 sm:h-24 md:h-[100px] w-auto opacity-90 group-hover:opacity-100 transition-opacity duration-300"
           />
         </a>
       </div>

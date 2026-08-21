@@ -79,7 +79,7 @@ export default function Home() {
       </div>
 
       {/* ── Supported By ──────────────────────────── */}
-      {/* <SupportedBy /> */}
+      <SupportedBy />
 
       {/* ── CTA Section ─────────────────────────────── */}
       <CTASection />
