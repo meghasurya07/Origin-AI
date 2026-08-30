@@ -114,6 +114,11 @@ const navigationJsonLd = {
       name: "Careers",
       url: "https://www.originai.in/careers",
     },
+    {
+      "@type": "SiteNavigationElement",
+      name: "News",
+      url: "https://www.originai.in/news",
+    },
   ],
 };
 

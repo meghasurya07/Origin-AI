@@ -79,7 +79,7 @@ export default function CareersPage() {
             While we are currently operating in stealth and not actively listing specific roles, we are always looking for exceptional researchers and engineers who think from first principles. If you thrive in high-ownership environments and want to work on pioneering AGI systems, we want to hear from you.
           </p>
           <a
-            href="mailto:careers@originailabs.com"
+            href="mailto:megha@originai.in"
             className="inline-flex items-center gap-2 bg-white text-black text-sm font-medium px-6 py-3 rounded-full hover:bg-white/90 transition-colors"
           >
             <svg
