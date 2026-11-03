@@ -138,7 +138,7 @@ export default function AboutPage() {
                 <p className="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent text-xs sm:text-sm font-medium uppercase tracking-wider mt-1 mb-3">
                   Co-Founder
                 </p>
-                <div className="flex items-center gap-3 mt-1">
+                <div className="flex items-center justify-center gap-3 mt-1">
                 <a
                   href="https://www.linkedin.com/in/megha-surya-bodepudi-2b292b316/"
                   target="_blank"
@@ -183,7 +183,7 @@ export default function AboutPage() {
                 <p className="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent text-xs sm:text-sm font-medium uppercase tracking-wider mt-1 mb-3">
                   Co-Founder
                 </p>
-                <div className="flex items-center gap-3 mt-1">
+                <div className="flex items-center justify-center gap-3 mt-1">
                 <a
                   href="https://www.linkedin.com/in/maheshbodepudi/"
                   target="_blank"
