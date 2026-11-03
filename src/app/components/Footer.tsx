@@ -108,10 +108,10 @@ const safetyLinks = [
   { label: "Privacy Policy", href: "/privacy" },
 ];
 
-// TODO: Replace with actual Origin AI social profile URLs when available
+// TODO: Replace other social links with actual Origin AI profile URLs when available
 const socialIcons = [
   { Icon: XIcon, label: "X", href: "https://x.com" },
-  { Icon: LinkedinIcon, label: "LinkedIn", href: "https://linkedin.com" },
+  { Icon: LinkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/company/originailabs/" },
   { Icon: InstagramIcon, label: "Instagram", href: "https://instagram.com" },
   { Icon: YoutubeIcon, label: "YouTube", href: "https://youtube.com" },
   { Icon: DiscordIcon, label: "Discord", href: "https://discord.gg" },

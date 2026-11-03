@@ -143,8 +143,8 @@ const organizationJsonLd = {
       },
     },
   ],
-  // TODO: Replace with actual Origin AI social profile URLs when available
   sameAs: [
+    "https://www.linkedin.com/company/originailabs/",
     "https://www.linkedin.com/in/megha-surya-bodepudi-2b292b316/",
     "https://www.linkedin.com/in/maheshbodepudi/",
   ],
