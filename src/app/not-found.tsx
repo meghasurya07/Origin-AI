@@ -2,36 +2,20 @@
 
 import "./not-found.css";
 import Link from "next/link";
-import { useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
-
-const BG_VIDEOS = [
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260801_001207_ec20d138-aa45-4b2b-ab8c-bdc71607f240.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_115329_5e00c9c5-4d69-49b7-94c3-9c31c60bb644.mp4",
-];
+import BackgroundVideo from "./components/BackgroundVideo";
+import { NOT_FOUND_VIDEOS } from "./lib/constants";
 
 export default function NotFound() {
   const router = useRouter();
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      const index = Math.floor(Math.random() * BG_VIDEOS.length);
-      videoRef.current.src = BG_VIDEOS[index];
-    }
-  }, []);
 
   return (
     <main className="relative min-h-[100svh] w-full bg-black overflow-x-hidden">
       {/* ── Background Video ─────────────────── */}
-      <video
-        ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
-        aria-hidden="true"
+      <BackgroundVideo
+        videos={NOT_FOUND_VIDEOS}
+        alwaysLoop
+        position="absolute"
       />
 
       {/* ── Logo ─────────────────────────────── */}

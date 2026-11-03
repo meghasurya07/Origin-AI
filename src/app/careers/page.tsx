@@ -1,38 +1,16 @@
 "use client";
 
-import { useRef, useEffect } from "react";
 import { motion } from "motion/react";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-
-const BG_VIDEOS = [
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_230229_7c9bc431-46cf-489a-948d-e8144d8eb5d4.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_114316_1c7889ad-2885-410e-b493-98119fee0ddb.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260217_030345_246c0224-10a4-422c-b324-070b7c0eceda.mp4",
-];
+import FooterWrapper from "../components/FooterWrapper";
+import BackgroundVideo from "../components/BackgroundVideo";
+import { MailIcon } from "../components/Icons";
 
 export default function CareersPage() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      const index = Math.floor(Math.random() * BG_VIDEOS.length);
-      videoRef.current.src = BG_VIDEOS[index];
-      videoRef.current.loop = index !== 0;
-    }
-  }, []);
-
   return (
     <main className="relative w-full min-h-screen overflow-x-hidden flex flex-col items-center font-sans selection:bg-white/20 selection:text-white">
       {/* ── Background Video ─────────────────── */}
-      <video
-        ref={videoRef}
-        className="fixed inset-0 w-full h-full object-cover z-[0]"
-        autoPlay
-        muted
-        playsInline
-        aria-hidden="true"
-      />
+      <BackgroundVideo />
       <div className="fixed inset-0 bg-black/70 z-[1]" />
 
       {/* ── Navbar ───────────────────────────── */}
@@ -83,31 +61,14 @@ export default function CareersPage() {
             href="mailto:megha@originai.in"
             className="inline-flex items-center gap-2 bg-white text-black text-sm font-medium px-6 py-3 rounded-full hover:bg-white/90 transition-colors"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="mt-0.5"
-            >
-              <rect width="20" height="16" x="2" y="4" rx="2" />
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-            </svg>
+            <MailIcon size={16} className="mt-0.5" />
             Send Speculative Application
           </a>
         </motion.div>
       </section>
 
-
       {/* ── Footer ───────────────────────────── */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
-        <Footer />
-      </div>
+      <FooterWrapper />
     </main>
   );
 }

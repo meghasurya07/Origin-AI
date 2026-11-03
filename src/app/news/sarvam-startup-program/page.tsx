@@ -1,38 +1,16 @@
 "use client";
 
-import { useRef, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-
-const BG_VIDEOS = [
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_230229_7c9bc431-46cf-489a-948d-e8144d8eb5d4.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_114316_1c7889ad-2885-410e-b493-98119fee0ddb.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260217_030345_246c0224-10a4-422c-b324-070b7c0eceda.mp4",
-];
+import FooterWrapper from "../../components/FooterWrapper";
+import BackgroundVideo from "../../components/BackgroundVideo";
 
 export default function SarvamStartupProgramArticle() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      const index = Math.floor(Math.random() * BG_VIDEOS.length);
-      videoRef.current.src = BG_VIDEOS[index];
-      videoRef.current.loop = index !== 0;
-    }
-  }, []);
-
   return (
     <main className="relative w-full min-h-screen overflow-x-hidden flex flex-col items-center font-sans selection:bg-white/20 selection:text-white">
       {/* ── Background Video ─────────────────── */}
-      <video
-        ref={videoRef}
-        className="fixed inset-0 w-full h-full object-cover z-[0]"
-        autoPlay
-        muted
-        playsInline
-      />
+      <BackgroundVideo />
 
       {/* ── Navbar ───────────────────────────── */}
       <Navbar />
@@ -200,9 +178,7 @@ export default function SarvamStartupProgramArticle() {
       </article>
 
       {/* ── Footer ───────────────────────────── */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
-        <Footer />
-      </div>
+      <FooterWrapper />
     </main>
   );
 }

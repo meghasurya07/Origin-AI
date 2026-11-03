@@ -1,38 +1,53 @@
 "use client";
 
-import { useRef, useEffect } from "react";
 import { motion } from "motion/react";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import FooterWrapper from "../components/FooterWrapper";
+import BackgroundVideo from "../components/BackgroundVideo";
+import { LinkedInFilledIcon, MailIcon } from "../components/Icons";
 
-const BG_VIDEOS = [
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260511_230229_7c9bc431-46cf-489a-948d-e8144d8eb5d4.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260429_114316_1c7889ad-2885-410e-b493-98119fee0ddb.mp4",
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260217_030345_246c0224-10a4-422c-b324-070b7c0eceda.mp4",
-];
+/** Team member data for the co-founder cards. */
+const TEAM = [
+  {
+    name: "Megha Surya Bodepudi",
+    role: "Co-Founder",
+    image: "/Linkedin Profile.png",
+    linkedin: "https://www.linkedin.com/in/megha-surya-bodepudi-2b292b316/",
+    email: "megha@originai.in",
+  },
+  {
+    name: "Mahesh Bodepudi",
+    role: "Co-Founder",
+    image: "/Mahesh.jpg",
+    linkedin: "https://www.linkedin.com/in/maheshbodepudi/",
+    email: "mahesh@originai.in",
+  },
+] as const;
+
+/** Mission pillar data. */
+const PILLARS = [
+  {
+    label: "Research",
+    value:
+      "Advancing foundational AI research in machine learning, NLP, and computer vision.",
+  },
+  {
+    label: "Safety",
+    value:
+      "Developing AI systems that are aligned, transparent, and beneficial to humanity.",
+  },
+  {
+    label: "Impact",
+    value:
+      "Making cutting-edge AI accessible and driving India's leadership in the global AI race.",
+  },
+] as const;
 
 export default function AboutPage() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      const index = Math.floor(Math.random() * BG_VIDEOS.length);
-      videoRef.current.src = BG_VIDEOS[index];
-      videoRef.current.loop = index !== 0;
-    }
-  }, []);
-
   return (
     <main className="relative w-full min-h-screen overflow-x-hidden flex flex-col items-center font-sans selection:bg-white/20 selection:text-white">
       {/* ── Background Video ─────────────────── */}
-      <video
-        ref={videoRef}
-        className="fixed inset-0 w-full h-full object-cover z-[0]"
-        autoPlay
-        muted
-        playsInline
-        aria-hidden="true"
-      />
+      <BackgroundVideo />
       <div className="fixed inset-0 bg-black/70 z-[1]" />
 
       {/* ── Navbar ───────────────────────────── */}
@@ -76,23 +91,7 @@ export default function AboutPage() {
             The race to AGI will define human progress, and Origin AI exists to ensure India leads this frontier rather than follows it. We are building safe, general-purpose intelligence and foundational models to transform industries and push the boundaries of what is possible, competing directly with the world&apos;s most ambitious labs.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-            {[
-              {
-                label: "Research",
-                value:
-                  "Advancing foundational AI research in machine learning, NLP, and computer vision.",
-              },
-              {
-                label: "Safety",
-                value:
-                  "Developing AI systems that are aligned, transparent, and beneficial to humanity.",
-              },
-              {
-                label: "Impact",
-                value:
-                  "Making cutting-edge AI accessible and driving India's leadership in the global AI race.",
-              },
-            ].map((item) => (
+            {PILLARS.map((item) => (
               <div key={item.label} className="border-t border-white/10 pt-4">
                 <p className="text-white text-sm font-semibold uppercase tracking-wider mb-2">
                   {item.label}
@@ -119,103 +118,55 @@ export default function AboutPage() {
 
           {/* Co-Founder Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
-            {/* Megha */}
-            <div className="liquid-glass rounded-2xl p-5 sm:p-6 flex flex-col items-center text-center gap-4">
-              <div className="shrink-0 w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden ring-1 ring-white/10">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/Linkedin Profile.png"
-                  alt="Megha Surya Bodepudi"
-                  width="200"
-                  height="200"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-white text-lg sm:text-xl font-semibold tracking-tight">
-                  Megha Surya Bodepudi
-                </h3>
-                <p className="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent text-xs sm:text-sm font-medium uppercase tracking-wider mt-1 mb-3">
-                  Co-Founder
-                </p>
-                <div className="flex items-center justify-center gap-3 mt-1">
-                <a
-                  href="https://www.linkedin.com/in/megha-surya-bodepudi-2b292b316/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Megha Surya Bodepudi on LinkedIn"
-                  className="text-white/40 hover:text-white/70 transition-colors"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                  </svg>
-                </a>
-                <a
-                  href="mailto:megha@originai.in"
-                  aria-label="Email Megha Surya Bodepudi"
-                  className="text-white/40 hover:text-white/70 transition-colors"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect width="20" height="16" x="2" y="4" rx="2" />
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                  </svg>
-                </a>
+            {TEAM.map((member) => (
+              <div
+                key={member.name}
+                className="liquid-glass rounded-2xl p-5 sm:p-6 flex flex-col items-center text-center gap-4"
+              >
+                <div className="shrink-0 w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden ring-1 ring-white/10">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    width="200"
+                    height="200"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <h3 className="text-white text-lg sm:text-xl font-semibold tracking-tight">
+                    {member.name}
+                  </h3>
+                  <p className="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent text-xs sm:text-sm font-medium uppercase tracking-wider mt-1 mb-3">
+                    {member.role}
+                  </p>
+                  <div className="flex items-center justify-center gap-3 mt-1">
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${member.name} on LinkedIn`}
+                      className="text-white/40 hover:text-white/70 transition-colors"
+                    >
+                      <LinkedInFilledIcon size={16} />
+                    </a>
+                    <a
+                      href={`mailto:${member.email}`}
+                      aria-label={`Email ${member.name}`}
+                      className="text-white/40 hover:text-white/70 transition-colors"
+                    >
+                      <MailIcon size={16} />
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Mahesh */}
-            <div className="liquid-glass rounded-2xl p-5 sm:p-6 flex flex-col items-center text-center gap-4">
-              <div className="shrink-0 w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden ring-1 ring-white/10">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/Mahesh.jpg"
-                  alt="Mahesh Bodepudi"
-                  width="200"
-                  height="200"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div>
-                <h3 className="text-white text-lg sm:text-xl font-semibold tracking-tight">
-                  Mahesh Bodepudi
-                </h3>
-                <p className="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent text-xs sm:text-sm font-medium uppercase tracking-wider mt-1 mb-3">
-                  Co-Founder
-                </p>
-                <div className="flex items-center justify-center gap-3 mt-1">
-                <a
-                  href="https://www.linkedin.com/in/maheshbodepudi/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Mahesh Bodepudi on LinkedIn"
-                  className="text-white/40 hover:text-white/70 transition-colors"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                  </svg>
-                </a>
-                <a
-                  href="mailto:mahesh@originai.in"
-                  aria-label="Email Mahesh Bodepudi"
-                  className="text-white/40 hover:text-white/70 transition-colors"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect width="20" height="16" x="2" y="4" rx="2" />
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                  </svg>
-                </a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </motion.div>
       </section>
 
       {/* ── Footer ───────────────────────────── */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
-        <Footer />
-      </div>
+      <FooterWrapper />
     </main>
   );
 }
