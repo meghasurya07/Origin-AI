@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "News — Origin AI",
+  title: "News",
   description:
-    "Latest announcements, research updates, and milestones from Origin AI.",
+    "Latest announcements, partnerships, research updates, and milestones from Origin AI — India's frontier AI research lab.",
   openGraph: {
-    title: "News — Origin AI",
+    title: "Origin AI News — Announcements & Updates",
     description:
-      "Latest announcements, research updates, and milestones from Origin AI.",
+      "Latest announcements, partnerships, and milestones from Origin AI.",
     url: "https://www.originai.in/news",
   },
   twitter: {
-    title: "News — Origin AI",
+    title: "Origin AI News — Announcements & Updates",
     description:
-      "Latest announcements, research updates, and milestones from Origin AI.",
+      "Latest announcements, partnerships, and milestones from Origin AI.",
   },
   alternates: {
     canonical: "https://www.originai.in/news",

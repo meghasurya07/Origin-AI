@@ -31,6 +31,7 @@ export default function AboutPage() {
         autoPlay
         muted
         playsInline
+        aria-hidden="true"
       />
       <div className="fixed inset-0 bg-black/70 z-[1]" />
 
@@ -51,6 +52,7 @@ export default function AboutPage() {
             </span>
           </p>
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight">
+            <span className="sr-only">Origin AI: </span>
             Building the future of{" "}
             <span className="bg-[linear-gradient(90deg,#0ea5e9,#7dd3fc,#0ea5e9)] bg-clip-text text-transparent">
               intelligence

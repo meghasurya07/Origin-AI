@@ -25,7 +25,7 @@ export default function Navbar() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/Origin AI.png"
-            alt="Origin AI"
+            alt="Origin AI — Frontier AI Research Lab from India"
             width="600"
             height="400"
             className="h-28 sm:h-36 md:h-48 w-auto -my-4 sm:-my-6 md:-my-8"

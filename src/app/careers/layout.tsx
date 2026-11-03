@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Careers — Origin AI",
+  title: "Careers",
   description:
-    "Join Origin AI and help build the future of artificial general intelligence. Explore open roles and opportunities.",
+    "Join Origin AI — India's frontier AI research lab. We're building a world-class team of researchers, engineers, and builders to develop safe general-purpose intelligence.",
   openGraph: {
-    title: "Careers — Origin AI",
+    title: "Careers at Origin AI — Join India's Frontier AI Lab",
     description:
-      "Join Origin AI and help build the future of artificial general intelligence.",
+      "Join Origin AI and help build the future of artificial general intelligence from India.",
     url: "https://www.originai.in/careers",
   },
   twitter: {
-    title: "Careers — Origin AI",
+    title: "Careers at Origin AI — Join India's Frontier AI Lab",
     description:
-      "Join Origin AI and help build the future of artificial general intelligence.",
+      "Join Origin AI and help build the future of artificial general intelligence from India.",
   },
   alternates: {
     canonical: "https://www.originai.in/careers",

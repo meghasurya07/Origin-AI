@@ -31,6 +31,7 @@ export default function CareersPage() {
         autoPlay
         muted
         playsInline
+        aria-hidden="true"
       />
       <div className="fixed inset-0 bg-black/70 z-[1]" />
 

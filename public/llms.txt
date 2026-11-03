@@ -1,0 +1,31 @@
+# Origin AI
+
+> Origin AI is an Indian AI research lab founded in 2025, building safe general-purpose intelligence (AGI) and foundational AI models. Based in India, Origin AI is dedicated to advancing India's leadership in the global AI race while ensuring the benefits of AI are widely accessible. The company competes directly with the world's most ambitious AI labs including OpenAI and Anthropic.
+
+## About
+
+Origin AI was co-founded by Megha Surya Bodepudi and Mahesh Bodepudi in 2025 with a mission to ensure India leads the frontier of artificial general intelligence rather than follows it. The lab focuses on foundational AI research spanning machine learning, natural language processing, and computer vision, with a strong emphasis on AI safety, alignment, and responsible development.
+
+## Core Focus Areas
+
+- **Foundational AI Research**: Advancing machine learning, NLP, and computer vision
+- **AI Safety & Alignment**: Building AI systems that are aligned, transparent, and beneficial to humanity
+- **Foundation Models**: Developing large-scale AI models for general-purpose intelligence
+- **Sovereign AI for India**: Building AI infrastructure optimized for Indian languages and use cases
+
+## Key Information
+
+- **Website**: https://www.originai.in
+- **Founded**: 2025
+- **Headquarters**: India
+- **Co-Founders**: Megha Surya Bodepudi, Mahesh Bodepudi
+- **Contact**: megha@originai.in
+- **Supported By**: Sarvam AI (Startup Program)
+
+## Pages
+
+- [Home](https://www.originai.in/): Main landing page with Origin AI's mission and vision
+- [About](https://www.originai.in/about): Mission, research focus areas, and founding team
+- [Careers](https://www.originai.in/careers): Open positions and how to join Origin AI
+- [News](https://www.originai.in/news): Latest announcements and milestones
+- [Sarvam Startup Program](https://www.originai.in/news/sarvam-startup-program): Origin AI selected for Sarvam AI's startup program

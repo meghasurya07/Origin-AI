@@ -11,11 +11,23 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "Origin AI",
-    template: "%s",
+    default: "Origin AI — Frontier AI Research Lab from India",
+    template: "%s — Origin AI",
   },
   description:
-    "AI research and products that advance intelligence at the frontier. Origin AI is dedicated to developing the next generation of intelligent systems while ensuring their benefits are widely accessible.",
+    "Origin AI is an Indian AI research lab founded in 2025, building safe general-purpose intelligence and foundational AI models. Competing with the world's leading AI labs to advance India's leadership in the global AI race.",
+  keywords: [
+    "Origin AI",
+    "Origin AI India",
+    "originai.in",
+    "AI research lab India",
+    "artificial general intelligence",
+    "frontier AI research",
+    "Indian AI startup",
+    "AGI research",
+    "Origin AI research",
+    "safe AI India",
+  ],
   metadataBase: new URL("https://www.originai.in"),
   robots: {
     index: true,
@@ -23,15 +35,15 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": 0,
+      "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
   },
   openGraph: {
-    title: "Origin AI",
+    title: "Origin AI — Frontier AI Research Lab from India",
     description:
-      "AI research and products that advance intelligence at the frontier.",
+      "Origin AI is an Indian AI research lab building safe general-purpose intelligence and foundational AI models to advance India's leadership in the global AI race.",
     url: "https://www.originai.in",
     siteName: "Origin AI",
     images: [
@@ -39,17 +51,17 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Origin AI",
+        alt: "Origin AI — Frontier AI Research Lab from India",
       },
     ],
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Origin AI",
+    title: "Origin AI — Frontier AI Research Lab from India",
     description:
-      "AI research and products that advance intelligence at the frontier.",
+      "Indian AI research lab building safe general-purpose intelligence and foundational AI models.",
     images: ["/og-image.png"],
   },
   alternates: {
@@ -62,61 +74,118 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 };
 
-// Organization structured data
+// ── Organization structured data (entity disambiguation) ──────────
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "ResearchOrganization",
+  "@id": "https://www.originai.in/#organization",
   name: "Origin AI",
+  alternateName: ["Origin AI India", "Origin AI Research", "originai.in"],
+  legalName: "Origin AI",
   url: "https://www.originai.in",
-  logo: "https://www.originai.in/og-image.png",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.originai.in/og-image.png",
+    width: 1200,
+    height: 630,
+  },
+  image: "https://www.originai.in/og-image.png",
   description:
-    "AI research and products that advance intelligence at the frontier.",
+    "Origin AI is an Indian AI research lab founded in 2025, building safe general-purpose intelligence and foundational AI models to advance India's leadership in the global AI race.",
   foundingDate: "2025",
+  foundingLocation: {
+    "@type": "Place",
+    name: "India",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "IN",
+    },
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India",
+  },
+  knowsAbout: [
+    "Artificial Intelligence",
+    "Artificial General Intelligence",
+    "Machine Learning",
+    "Deep Learning",
+    "Natural Language Processing",
+    "Computer Vision",
+    "AI Safety",
+    "Foundation Models",
+    "Large Language Models",
+  ],
+  knowsLanguage: ["en", "hi"],
   founders: [
     {
       "@type": "Person",
+      "@id": "https://www.originai.in/#megha",
       name: "Megha Surya Bodepudi",
       jobTitle: "Co-Founder",
+      url: "https://www.originai.in/about",
+      sameAs: [
+        "https://www.linkedin.com/in/megha-surya-bodepudi-2b292b316/",
+      ],
+      worksFor: {
+        "@id": "https://www.originai.in/#organization",
+      },
     },
     {
       "@type": "Person",
+      "@id": "https://www.originai.in/#mahesh",
       name: "Mahesh Bodepudi",
       jobTitle: "Co-Founder",
+      url: "https://www.originai.in/about",
+      sameAs: ["https://www.linkedin.com/in/maheshbodepudi/"],
+      worksFor: {
+        "@id": "https://www.originai.in/#organization",
+      },
     },
   ],
+  // TODO: Replace with actual Origin AI social profile URLs when available
   sameAs: [
-    "https://x.com",
-    "https://linkedin.com",
-    "https://instagram.com",
-    "https://youtube.com",
-    "https://discord.gg",
+    "https://www.linkedin.com/in/megha-surya-bodepudi-2b292b316/",
+    "https://www.linkedin.com/in/maheshbodepudi/",
   ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "megha@originai.in",
+    contactType: "general",
+  },
 };
 
+// ── WebSite schema (linked to Organization) ───────────────────────
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
+  "@id": "https://www.originai.in/#website",
   name: "Origin AI",
+  alternateName: "Origin AI India",
   url: "https://www.originai.in",
+  publisher: {
+    "@id": "https://www.originai.in/#organization",
+  },
+  inLanguage: "en",
 };
 
-// SiteNavigationElement — tells Google which pages matter for sitelinks
+// ── SiteNavigationElement — tells Google which pages matter ───────
 const navigationJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "SiteNavigationElement",
-      name: "About",
+      name: "About Origin AI",
       url: "https://www.originai.in/about",
     },
     {
       "@type": "SiteNavigationElement",
-      name: "Careers",
+      name: "Origin AI Careers",
       url: "https://www.originai.in/careers",
     },
     {
       "@type": "SiteNavigationElement",
-      name: "News",
+      name: "Origin AI News",
       url: "https://www.originai.in/news",
     },
   ],

@@ -32,6 +32,7 @@ export default function Home() {
         autoPlay
         muted
         playsInline
+        aria-hidden="true"
       />
 
       {/* ── Navbar ────────────────────────────────────── */}
@@ -52,6 +53,7 @@ export default function Home() {
               </span>
             </p>
             <h1 className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.15] sm:leading-[1.1] md:leading-[1.08] tracking-tight">
+              <span className="sr-only">Origin AI — </span>
               AI research and products that advance intelligence at the{" "}
               <span className="bg-[linear-gradient(90deg,#0ea5e9,#7dd3fc,#0ea5e9)] bg-clip-text text-transparent">
                 frontier
