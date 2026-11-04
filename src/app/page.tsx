@@ -64,7 +64,7 @@ export default function Home() {
             What is Origin AI?
           </h2>
           <p className="text-white/60 text-sm sm:text-base leading-relaxed mb-6">
-            Origin AI is an Indian AI research lab founded in 2025, building safe general-purpose intelligence and foundational AI models. Based in India, Origin AI is competing directly with the world&apos;s leading AI labs — including OpenAI and Anthropic — to advance India&apos;s leadership in the global AI race.
+            Origin AI is an Indian AI research lab founded in 2026, building safe general-purpose intelligence and foundational AI models. Based in India, Origin AI is competing directly with the world&apos;s leading AI labs — including OpenAI and Anthropic — to advance India&apos;s leadership in the global AI race.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             <div className="border-t border-white/10 pt-4">
