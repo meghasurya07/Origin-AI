@@ -57,6 +57,38 @@ export default function Home() {
         </div>
       </div>
 
+      {/* ── About Origin AI (crawlable content for SEO) ── */}
+      <section className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 mt-20 sm:mt-28 md:mt-36">
+        <div className="liquid-glass rounded-2xl p-6 sm:p-10 md:p-12">
+          <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight mb-4">
+            What is Origin AI?
+          </h2>
+          <p className="text-white/60 text-sm sm:text-base leading-relaxed mb-6">
+            Origin AI is an Indian AI research lab founded in 2025, building safe general-purpose intelligence and foundational AI models. Based in India, Origin AI is competing directly with the world&apos;s leading AI labs — including OpenAI and Anthropic — to advance India&apos;s leadership in the global AI race.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+            <div className="border-t border-white/10 pt-4">
+              <p className="text-white text-sm font-semibold uppercase tracking-wider mb-2">Frontier Research</p>
+              <p className="text-white/50 text-xs sm:text-sm leading-relaxed">
+                Origin AI conducts foundational research in machine learning, natural language processing, and computer vision to push the boundaries of artificial general intelligence.
+              </p>
+            </div>
+            <div className="border-t border-white/10 pt-4">
+              <p className="text-white text-sm font-semibold uppercase tracking-wider mb-2">AI Safety</p>
+              <p className="text-white/50 text-xs sm:text-sm leading-relaxed">
+                Origin AI prioritises building AI systems that are aligned, transparent, and beneficial to humanity — ensuring responsible development at every stage.
+              </p>
+            </div>
+            <div className="border-t border-white/10 pt-4">
+              <p className="text-white text-sm font-semibold uppercase tracking-wider mb-2">Made in India</p>
+              <p className="text-white/50 text-xs sm:text-sm leading-relaxed">
+                Founded by Megha Surya Bodepudi and Mahesh Bodepudi, Origin AI is building sovereign AI infrastructure from India, for the world.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Supported By ──────────────────────────── */}
       <SupportedBy />
 
