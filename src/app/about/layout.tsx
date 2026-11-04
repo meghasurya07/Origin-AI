@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "../components/JsonLd";
+import { makeBreadcrumbJsonLd } from "../lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "About",
@@ -20,24 +22,9 @@ export const metadata: Metadata = {
   },
 };
 
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://www.originai.in",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "About",
-      item: "https://www.originai.in/about",
-    },
-  ],
-};
+const breadcrumbJsonLd = makeBreadcrumbJsonLd([
+  { name: "About", path: "/about" },
+]);
 
 // FAQ structured data for AEO (Answer Engine Optimization)
 const faqJsonLd = {
@@ -86,14 +73,8 @@ export default function AboutLayout({
 }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
+      <JsonLd data={breadcrumbJsonLd} />
+      <JsonLd data={faqJsonLd} />
       {children}
     </>
   );

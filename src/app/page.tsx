@@ -5,6 +5,40 @@ import SupportedBy from "./components/SupportedBy";
 import CTASection from "./components/CTASection";
 import FooterWrapper from "./components/FooterWrapper";
 import BackgroundVideo from "./components/BackgroundVideo";
+import SectionLabel from "./components/SectionLabel";
+
+// ── Data ──────────────────────────────────────────────────────────────
+
+/** Hero quick-links shown below the sub-heading. */
+const HERO_LINKS = [
+  { label: "Our Mission", href: "/about" },
+  { label: "Latest News", href: "/news" },
+  { label: "Careers", href: "/careers" },
+] as const;
+
+const HERO_LINK_CLASS =
+  "text-white/50 hover:text-white text-xs sm:text-sm transition-colors underline underline-offset-2 decoration-white/20 hover:decoration-white/50";
+
+/** SEO pillar cards in the "What is Origin AI?" section. */
+const ORIGIN_AI_PILLARS = [
+  {
+    title: "Frontier Research",
+    description:
+      "Origin AI conducts foundational research in machine learning, natural language processing, and computer vision to push the boundaries of artificial general intelligence.",
+  },
+  {
+    title: "AI Safety",
+    description:
+      "Origin AI prioritises building AI systems that are aligned, transparent, and beneficial to humanity — ensuring responsible development at every stage.",
+  },
+  {
+    title: "Made in India",
+    description:
+      "Founded by Megha Surya Bodepudi and Mahesh Bodepudi, Origin AI is building sovereign AI infrastructure from India, for the world.",
+  },
+] as const;
+
+// ── Component ─────────────────────────────────────────────────────────
 
 export default function Home() {
   return (
@@ -23,12 +57,10 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 sm:gap-5 lg:gap-16">
           {/* Headline */}
           <div className="lg:max-w-[55%] shrink-0">
-            <p className="flex items-center gap-3 text-sm sm:text-sm uppercase tracking-[0.2em] font-medium mb-3 sm:mb-4">
-              <span className="w-10 sm:w-14 h-[2px] rounded-full bg-[linear-gradient(90deg,transparent,#fbbf24_40%,#f97316)] shadow-[0_0_8px_1px_rgba(251,191,36,0.4)]" />
-              <span className="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent">
-                Pioneering the future of AI
-              </span>
-            </p>
+            <SectionLabel
+              text="Pioneering the future of AI"
+              className="mb-3 sm:mb-4"
+            />
             <h1 className="text-white text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.15] sm:leading-[1.1] md:leading-[1.08] tracking-tight">
               <span className="sr-only">Origin AI — </span>
               AI research and products that advance intelligence at the{" "}
@@ -47,11 +79,16 @@ export default function Home() {
               accessible.
             </p>
             <div className="flex items-center gap-4 mt-4 lg:mt-5">
-              <a className="text-white/50 hover:text-white text-xs sm:text-sm transition-colors underline underline-offset-2 decoration-white/20 hover:decoration-white/50" href="/about">Our Mission</a>
-              <span className="w-1 h-1 rounded-full bg-white/20" />
-              <a className="text-white/50 hover:text-white text-xs sm:text-sm transition-colors underline underline-offset-2 decoration-white/20 hover:decoration-white/50" href="/news">Latest News</a>
-              <span className="w-1 h-1 rounded-full bg-white/20" />
-              <a className="text-white/50 hover:text-white text-xs sm:text-sm transition-colors underline underline-offset-2 decoration-white/20 hover:decoration-white/50" href="/careers">Careers</a>
+              {HERO_LINKS.map((link, i) => (
+                <span key={link.href} className="contents">
+                  {i > 0 && (
+                    <span className="w-1 h-1 rounded-full bg-white/20" />
+                  )}
+                  <a className={HERO_LINK_CLASS} href={link.href}>
+                    {link.label}
+                  </a>
+                </span>
+              ))}
             </div>
           </div>
         </div>
@@ -64,27 +101,19 @@ export default function Home() {
             What is Origin AI?
           </h2>
           <p className="text-white/60 text-sm sm:text-base leading-relaxed mb-6">
-            Origin AI is an Indian AI research lab founded in 2026, building safe general-purpose intelligence and foundational AI models. Based in India, Origin AI is competing directly with the world&apos;s leading AI labs — including OpenAI and Anthropic — to advance India&apos;s leadership in the global AI race.
+            Origin AI is an Indian AI research lab founded in 2025, building safe general-purpose intelligence and foundational AI models. Based in India, Origin AI is competing directly with the world&apos;s leading AI labs — including OpenAI and Anthropic — to advance India&apos;s leadership in the global AI race.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-            <div className="border-t border-white/10 pt-4">
-              <p className="text-white text-sm font-semibold uppercase tracking-wider mb-2">Frontier Research</p>
-              <p className="text-white/50 text-xs sm:text-sm leading-relaxed">
-                Origin AI conducts foundational research in machine learning, natural language processing, and computer vision to push the boundaries of artificial general intelligence.
-              </p>
-            </div>
-            <div className="border-t border-white/10 pt-4">
-              <p className="text-white text-sm font-semibold uppercase tracking-wider mb-2">AI Safety</p>
-              <p className="text-white/50 text-xs sm:text-sm leading-relaxed">
-                Origin AI prioritises building AI systems that are aligned, transparent, and beneficial to humanity — ensuring responsible development at every stage.
-              </p>
-            </div>
-            <div className="border-t border-white/10 pt-4">
-              <p className="text-white text-sm font-semibold uppercase tracking-wider mb-2">Made in India</p>
-              <p className="text-white/50 text-xs sm:text-sm leading-relaxed">
-                Founded by Megha Surya Bodepudi and Mahesh Bodepudi, Origin AI is building sovereign AI infrastructure from India, for the world.
-              </p>
-            </div>
+            {ORIGIN_AI_PILLARS.map((pillar) => (
+              <div key={pillar.title} className="border-t border-white/10 pt-4">
+                <p className="text-white text-sm font-semibold uppercase tracking-wider mb-2">
+                  {pillar.title}
+                </p>
+                <p className="text-white/50 text-xs sm:text-sm leading-relaxed">
+                  {pillar.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

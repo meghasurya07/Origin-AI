@@ -2,9 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import Navbar from "../components/Navbar";
-import FooterWrapper from "../components/FooterWrapper";
-import BackgroundVideo from "../components/BackgroundVideo";
+import PageShell from "../components/PageShell";
 
 /** News article entries. Add new items here as they are published. */
 const NEWS_ITEMS = [
@@ -20,16 +18,7 @@ const NEWS_ITEMS = [
 
 export default function NewsPage() {
   return (
-    <main className="relative w-full min-h-screen overflow-x-hidden flex flex-col items-center font-sans selection:bg-white/20 selection:text-white">
-      {/* ── Background Video ─────────────────── */}
-      <BackgroundVideo />
-
-      {/* ── Navbar ───────────────────────────── */}
-      <Navbar />
-
-      {/* ── Dark overlay ─────────────────────── */}
-      <div className="fixed inset-0 bg-black/70 z-[1]" />
-
+    <PageShell>
       {/* ── Content ──────────────────────────── */}
       <section className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-8 md:px-12 pt-32 sm:pt-40 pb-20">
         <motion.div
@@ -81,9 +70,6 @@ export default function NewsPage() {
           </div>
         </motion.div>
       </section>
-
-      {/* ── Footer ───────────────────────────── */}
-      <FooterWrapper />
-    </main>
+    </PageShell>
   );
 }

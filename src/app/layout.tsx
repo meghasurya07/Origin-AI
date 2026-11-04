@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import JsonLd from "./components/JsonLd";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -82,7 +83,8 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 };
 
-// ── Organization structured data (entity disambiguation) ──────────
+// ── Structured Data ───────────────────────────────────────────────────
+
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -169,7 +171,6 @@ const organizationJsonLd = {
   },
 };
 
-// ── WebSite schema (linked to Organization) ───────────────────────
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -191,7 +192,6 @@ const websiteJsonLd = {
   },
 };
 
-// ── SiteNavigationElement — tells Google which pages matter ───────
 const navigationJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -213,6 +213,8 @@ const navigationJsonLd = {
   ],
 };
 
+// ── Layout ────────────────────────────────────────────────────────────
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -224,24 +226,9 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="en-IN" href="https://www.originai.in" />
       </head>
       <body className="bg-black">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteJsonLd),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(navigationJsonLd),
-          }}
-        />
+        <JsonLd data={organizationJsonLd} />
+        <JsonLd data={websiteJsonLd} />
+        <JsonLd data={navigationJsonLd} />
         {children}
       </body>
     </html>

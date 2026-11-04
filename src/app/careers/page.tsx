@@ -1,21 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
-import Navbar from "../components/Navbar";
-import FooterWrapper from "../components/FooterWrapper";
-import BackgroundVideo from "../components/BackgroundVideo";
+import PageShell from "../components/PageShell";
+import SectionLabel from "../components/SectionLabel";
 import { MailIcon } from "../components/Icons";
 
 export default function CareersPage() {
   return (
-    <main className="relative w-full min-h-screen overflow-x-hidden flex flex-col items-center font-sans selection:bg-white/20 selection:text-white">
-      {/* ── Background Video ─────────────────── */}
-      <BackgroundVideo />
-      <div className="fixed inset-0 bg-black/70 z-[1]" />
-
-      {/* ── Navbar ───────────────────────────── */}
-      <Navbar />
-
+    <PageShell>
       {/* ── Hero ─────────────────────────────── */}
       <section className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 pt-32 sm:pt-40 pb-12 sm:pb-16">
         <motion.div
@@ -23,12 +15,7 @@ export default function CareersPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <p className="flex items-center gap-3 text-sm uppercase tracking-[0.2em] font-medium mb-4">
-            <span className="w-10 sm:w-14 h-[2px] rounded-full bg-[linear-gradient(90deg,transparent,#fbbf24_40%,#f97316)] shadow-[0_0_8px_1px_rgba(251,191,36,0.4)]" />
-            <span className="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent">
-              Careers
-            </span>
-          </p>
+          <SectionLabel text="Careers" />
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight mb-6">
             Join the mission to shape{" "}
             <span className="bg-[linear-gradient(90deg,#0ea5e9,#7dd3fc,#0ea5e9)] bg-clip-text text-transparent">
@@ -66,9 +53,6 @@ export default function CareersPage() {
           </a>
         </motion.div>
       </section>
-
-      {/* ── Footer ───────────────────────────── */}
-      <FooterWrapper />
-    </main>
+    </PageShell>
   );
 }

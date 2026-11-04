@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "../components/JsonLd";
+import { makeBreadcrumbJsonLd } from "../lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "News",
@@ -20,24 +22,9 @@ export const metadata: Metadata = {
   },
 };
 
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://www.originai.in",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "News",
-      item: "https://www.originai.in/news",
-    },
-  ],
-};
+const breadcrumbJsonLd = makeBreadcrumbJsonLd([
+  { name: "News", path: "/news" },
+]);
 
 export default function NewsLayout({
   children,
@@ -46,10 +33,7 @@ export default function NewsLayout({
 }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={breadcrumbJsonLd} />
       {children}
     </>
   );

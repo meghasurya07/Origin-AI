@@ -2,22 +2,11 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import Navbar from "../../components/Navbar";
-import FooterWrapper from "../../components/FooterWrapper";
-import BackgroundVideo from "../../components/BackgroundVideo";
+import PageShell from "../../components/PageShell";
 
 export default function SarvamStartupProgramArticle() {
   return (
-    <main className="relative w-full min-h-screen overflow-x-hidden flex flex-col items-center font-sans selection:bg-white/20 selection:text-white">
-      {/* ── Background Video ─────────────────── */}
-      <BackgroundVideo />
-
-      {/* ── Navbar ───────────────────────────── */}
-      <Navbar />
-
-      {/* ── Dark overlay ─────────────────────── */}
-      <div className="fixed inset-0 bg-black/70 z-[1]" />
-
+    <PageShell>
       {/* ── Article ──────────────────────────── */}
       <article className="relative z-10 w-full max-w-3xl mx-auto px-4 sm:px-8 md:px-12 pt-32 sm:pt-40 pb-20">
         <motion.div
@@ -176,9 +165,6 @@ export default function SarvamStartupProgramArticle() {
           </div>
         </motion.div>
       </article>
-
-      {/* ── Footer ───────────────────────────── */}
-      <FooterWrapper />
-    </main>
+    </PageShell>
   );
 }

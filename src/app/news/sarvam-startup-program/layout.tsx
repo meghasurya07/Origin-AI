@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import JsonLd from "../../components/JsonLd";
+import { makeBreadcrumbJsonLd } from "../../lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Origin AI selected for Sarvam AI Startup Program",
@@ -76,30 +78,10 @@ const articleJsonLd = {
   ],
 };
 
-const breadcrumbJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://www.originai.in",
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "News",
-      item: "https://www.originai.in/news",
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: "Sarvam AI Startup Program",
-      item: "https://www.originai.in/news/sarvam-startup-program",
-    },
-  ],
-};
+const breadcrumbJsonLd = makeBreadcrumbJsonLd([
+  { name: "News", path: "/news" },
+  { name: "Sarvam AI Startup Program", path: "/news/sarvam-startup-program" },
+]);
 
 export default function ArticleLayout({
   children,
@@ -108,14 +90,8 @@ export default function ArticleLayout({
 }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
+      <JsonLd data={articleJsonLd} />
+      <JsonLd data={breadcrumbJsonLd} />
       {children}
     </>
   );
