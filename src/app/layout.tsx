@@ -15,18 +15,22 @@ export const metadata: Metadata = {
     template: "%s — Origin AI",
   },
   description:
-    "Origin AI is an Indian AI research lab founded in 2025, building safe general-purpose intelligence and foundational AI models. Competing with the world's leading AI labs to advance India's leadership in the global AI race.",
+    "Origin AI is an Indian AI research lab founded in 2025 by Megha Surya Bodepudi and Mahesh Bodepudi. Building safe general-purpose intelligence and foundational AI models from India, competing with OpenAI and Anthropic. Visit originai.in.",
   keywords: [
     "Origin AI",
     "Origin AI India",
     "originai.in",
+    "Origin AI research lab",
     "AI research lab India",
     "artificial general intelligence",
     "frontier AI research",
     "Indian AI startup",
-    "AGI research",
+    "AGI research India",
     "Origin AI research",
     "safe AI India",
+    "Megha Surya Bodepudi",
+    "Mahesh Bodepudi",
+    "Origin AI founders",
   ],
   metadataBase: new URL("https://www.originai.in"),
   robots: {
@@ -41,9 +45,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Origin AI — Frontier AI Research Lab from India",
+    title: "Origin AI — Frontier AI Research Lab from India | originai.in",
     description:
-      "Origin AI is an Indian AI research lab building safe general-purpose intelligence and foundational AI models to advance India's leadership in the global AI race.",
+      "Origin AI is an Indian AI research lab founded in 2025, building safe general-purpose intelligence and foundational AI models. Competing with OpenAI and Anthropic to advance India's leadership in the global AI race.",
     url: "https://www.originai.in",
     siteName: "Origin AI",
     images: [
@@ -61,11 +65,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Origin AI — Frontier AI Research Lab from India",
     description:
-      "Indian AI research lab building safe general-purpose intelligence and foundational AI models.",
+      "Indian AI research lab building safe general-purpose intelligence and foundational AI models. Founded 2025.",
     images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://www.originai.in",
+    languages: {
+      "en-IN": "https://www.originai.in",
+    },
   },
   icons: {
     icon: "/icon.png",
@@ -78,10 +85,16 @@ export const metadata: Metadata = {
 // ── Organization structured data (entity disambiguation) ──────────
 const organizationJsonLd = {
   "@context": "https://schema.org",
-  "@type": "ResearchOrganization",
+  "@type": "Organization",
+  additionalType: "https://schema.org/ResearchOrganization",
   "@id": "https://www.originai.in/#organization",
   name: "Origin AI",
-  alternateName: ["Origin AI India", "Origin AI Research", "originai.in"],
+  alternateName: [
+    "Origin AI India",
+    "Origin AI Research",
+    "Origin AI Research Lab",
+    "originai.in",
+  ],
   legalName: "Origin AI",
   url: "https://www.originai.in",
   logo: {
@@ -92,7 +105,7 @@ const organizationJsonLd = {
   },
   image: "https://www.originai.in/og-image.png",
   description:
-    "Origin AI is an Indian AI research lab founded in 2025, building safe general-purpose intelligence and foundational AI models to advance India's leadership in the global AI race.",
+    "Origin AI is an Indian AI research lab founded in 2025 by Megha Surya Bodepudi and Mahesh Bodepudi. Building safe general-purpose intelligence and foundational AI models from India, competing with the world's leading AI labs to advance India's leadership in the global AI race.",
   foundingDate: "2025",
   foundingLocation: {
     "@type": "Place",
@@ -162,12 +175,20 @@ const websiteJsonLd = {
   "@type": "WebSite",
   "@id": "https://www.originai.in/#website",
   name: "Origin AI",
-  alternateName: "Origin AI India",
+  alternateName: ["Origin AI India", "originai.in"],
   url: "https://www.originai.in",
   publisher: {
     "@id": "https://www.originai.in/#organization",
   },
   inLanguage: "en",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://www.google.com/search?q=site%3Aoriginai.in+{search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
 };
 
 // ── SiteNavigationElement — tells Google which pages matter ───────
@@ -199,6 +220,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
+      <head>
+        <link rel="alternate" hrefLang="en-IN" href="https://www.originai.in" />
+      </head>
       <body className="bg-black">
         <script
           type="application/ld+json"

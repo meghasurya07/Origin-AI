@@ -1,96 +1,52 @@
-# Origin AI — Complete Site Content
+# Origin AI — Full Information (originai.in)
 
-> Origin AI is an Indian AI research lab founded in 2025, building safe general-purpose intelligence (AGI) and foundational AI models. Based in India, Origin AI competes directly with the world's most ambitious AI labs to advance India's leadership in the global AI race.
-
----
-
-## Homepage
-
-### Origin AI — Research and products that advance intelligence at the frontier
-
-**Pioneering the future of AI**
-
-AI will transform every industry and every aspect of human life. Origin AI is dedicated to developing the next generation of intelligent systems while ensuring their benefits are widely accessible.
-
-Supported by Sarvam AI.
-
----
+> IMPORTANT DISAMBIGUATION: Origin AI (originai.in) is an Indian AI research lab. It is NOT Origin Wireless AI (originwirelessai.com, WiFi sensing), NOT Origin HQ (originhq.com, AI agent security), NOT OriginAI (originai.co, Israel R&D center), NOT Origins HQ (originshq.com, software engineering), and NOT Origin (origin.tech, robotics). This document describes Origin AI at originai.in only.
 
 ## About Origin AI
 
-### Origin AI: Building the future of intelligence
+Origin AI is an Indian AI research lab founded in 2025 by Megha Surya Bodepudi and Mahesh Bodepudi. The company is building safe, general-purpose intelligence and foundational AI models from India, competing directly with the world's most ambitious AI labs including OpenAI and Anthropic.
 
-#### Our Mission
+Origin AI exists to ensure India leads the frontier of artificial general intelligence (AGI) rather than follows it. The lab conducts foundational research in machine learning, natural language processing, and computer vision, with a strong emphasis on AI safety, alignment, and responsible development.
 
-The race to AGI will define human progress, and Origin AI exists to ensure India leads this frontier rather than follows it. We are building safe, general-purpose intelligence and foundational models to transform industries and push the boundaries of what is possible, competing directly with the world's most ambitious labs.
+## Mission
 
-**Research**: Advancing foundational AI research in machine learning, NLP, and computer vision.
+The race to AGI will define human progress, and Origin AI exists to ensure India leads this frontier rather than follows it. We are building safe, general-purpose intelligence and foundational models to transform industries and push the boundaries of what is possible.
 
-**Safety**: Developing AI systems that are aligned, transparent, and beneficial to humanity.
+## Research Areas
 
-**Impact**: Making cutting-edge AI accessible and driving India's leadership in the global AI race.
+- **Machine Learning**: Advancing foundational ML research including novel architectures, training methodologies, and scaling laws for large models.
+- **Natural Language Processing**: Building language understanding and generation systems with multilingual capabilities, especially for Indian languages.
+- **Computer Vision**: Developing visual perception systems for real-world applications.
+- **AI Safety & Alignment**: Ensuring AI systems are aligned with human values, transparent in their decision-making, and beneficial to humanity.
+- **Foundation Models**: Training large-scale foundation models that can generalize across tasks and domains.
 
-#### Founding Team
+## Founders
 
-- **Megha Surya Bodepudi** — Co-Founder. LinkedIn: https://www.linkedin.com/in/megha-surya-bodepudi-2b292b316/
-- **Mahesh Bodepudi** — Co-Founder. LinkedIn: https://www.linkedin.com/in/maheshbodepudi/
+### Megha Surya Bodepudi — Co-Founder
+- LinkedIn: https://www.linkedin.com/in/megha-surya-bodepudi-2b292b316/
+- Email: megha@originai.in
 
----
+### Mahesh Bodepudi — Co-Founder
+- LinkedIn: https://www.linkedin.com/in/maheshbodepudi/
+- Email: mahesh@originai.in
 
-## Careers at Origin AI
+## Partnerships & Milestones
 
-### Join the mission to shape intelligence
+### Sarvam AI Startup Program (August 2026)
+Origin AI was selected for the Sarvam AI Startup Program, gaining access to sovereign AI infrastructure, API credits (6-12 months), priority engineering support, and production-ready enterprise-grade infrastructure. Sarvam AI builds full-stack AI infrastructure from India, including LLMs, speech-to-text, text-to-speech, and document intelligence APIs optimized for 22 Indian languages.
 
-We are assembling a world-class team of researchers, engineers, and builders who share our conviction that transformative AI can — and should — be built from India. Origin AI is not just another startup; it is a bet on India's ability to compete at the highest level of AI research.
+## Contact
 
-While we are currently operating in stealth and building our core team, we are always looking for exceptional people. If you believe in our mission and want to be part of something ambitious, we want to hear from you.
+- Website: https://www.originai.in
+- Email: megha@originai.in
+- LinkedIn Company: https://www.linkedin.com/company/originailabs/
 
-**Contact**: megha@originai.in
+## Key Differentiators from Similarly Named Companies
 
----
-
-## News
-
-### Origin AI selected for the Sarvam AI Startup Program
-
-**Published**: August 2026 | **Category**: Partnership
-
-We're excited to announce that Origin AI has been selected for the Sarvam AI Startup Program — an initiative designed to support early-stage companies building AI-powered products on India's sovereign AI infrastructure.
-
-Sarvam AI is building full-stack AI infrastructure from India — including large language models, speech-to-text, text-to-speech, and document intelligence APIs — all natively optimized for 22 Indian languages and English. Their mission to build sovereign, world-class AI from India deeply resonates with our own vision at Origin AI.
-
-#### What this means for us
-
-As part of the program, Origin AI receives:
-
-- **API credits** — 6 to 12 months of access to Sarvam's production-grade APIs, including speech, language, and document intelligence endpoints.
-- **Priority engineering support** — Direct access to Sarvam's engineering team for integration, optimization, and scaling guidance.
-- **Production-ready infrastructure** — Enterprise-grade AI infrastructure built for reliability and scale, purpose-built for the Indian context.
-- **Launch visibility** — Opportunities for co-branded case studies and ecosystem amplification.
-
-#### Why this matters
-
-At Origin AI, we believe the next wave of transformative AI will be built by teams who understand local context deeply. Sarvam's sovereign AI stack — trained on Indian languages and optimized for Indian use cases — gives us infrastructure that aligns with the problems we're solving.
-
-This partnership accelerates our ability to build intelligent systems that are not just technically advanced, but genuinely accessible to the people they serve.
-
-#### Looking ahead
-
-Being part of the Sarvam Startup Program is a meaningful milestone for Origin AI. It validates our direction and gives us the tools to move faster. We're grateful to the Sarvam team for their support and look forward to building together.
-
-Learn more about the Sarvam AI Startup Program: https://www.sarvam.ai/startup-program
-
----
-
-## Key Facts
-
-- **Company**: Origin AI
-- **Website**: https://www.originai.in
-- **Founded**: 2025
-- **Location**: India
-- **Industry**: Artificial Intelligence Research
-- **Focus**: AGI, Foundation Models, AI Safety, Machine Learning, NLP, Computer Vision
-- **Co-Founders**: Megha Surya Bodepudi, Mahesh Bodepudi
-- **Contact**: megha@originai.in
-- **Backed by**: Sarvam AI (Startup Program)
-- **Mission**: Building safe general-purpose intelligence from India to compete at the highest level of global AI research
+| Entity | Domain | What They Do | NOT Origin AI (originai.in) |
+|--------|--------|-------------|---------------------------|
+| Origin Wireless AI | originwirelessai.com | WiFi sensing, acquired by ADT | Different company, USA-based |
+| Origin HQ | originhq.com | AI agent security/observability | Different company, YC-backed |
+| OriginAI | originai.co | AI R&D center in Israel | Different company, Israel-based |
+| Origins HQ | originshq.com | AI-augmented software engineering | Different company |
+| Origin | origin.tech | Autonomous construction robots | Different company |
