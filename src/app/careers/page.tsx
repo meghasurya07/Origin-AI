@@ -4,17 +4,14 @@ import { motion } from "motion/react";
 import PageShell from "../components/PageShell";
 import SectionLabel from "../components/SectionLabel";
 import { MailIcon } from "../components/Icons";
+import { FADE_UP, easeOutTransition } from "../lib/animations";
 
 export default function CareersPage() {
   return (
     <PageShell>
       {/* ── Hero ─────────────────────────────── */}
       <section className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 pt-32 sm:pt-40 pb-12 sm:pb-16">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
+        <motion.div {...FADE_UP} transition={easeOutTransition()}>
           <SectionLabel text="Careers" />
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight mb-6">
             Join the mission to shape{" "}
@@ -33,9 +30,8 @@ export default function CareersPage() {
       {/* ── Opportunities Card ───────────────── */}
       <section className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 pb-16 sm:pb-20">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+          {...FADE_UP}
+          transition={easeOutTransition(0.15)}
           className="liquid-glass rounded-2xl p-6 sm:p-10 md:p-12 text-center flex flex-col items-center"
         >
           <h2 className="text-white text-xl sm:text-2xl font-semibold tracking-tight mb-4">

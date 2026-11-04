@@ -1,5 +1,18 @@
 import type { MetadataRoute } from "next";
 
+/** AI / LLM crawlers explicitly allowed for AIO/GEO. */
+const AI_CRAWLERS = [
+  "GPTBot",
+  "ChatGPT-User",
+  "Google-Extended",
+  "ClaudeBot",
+  "PerplexityBot",
+  "Applebot-Extended",
+  "anthropic-ai",
+  "Bytespider",
+  "cohere-ai",
+] as const;
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
@@ -8,43 +21,10 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/*{search_term_string}*"],
       },
-      // ── AI / LLM crawlers — explicitly allowed for AIO/GEO ──
-      {
-        userAgent: "GPTBot",
-        allow: "/",
-      },
-      {
-        userAgent: "ChatGPT-User",
-        allow: "/",
-      },
-      {
-        userAgent: "Google-Extended",
-        allow: "/",
-      },
-      {
-        userAgent: "ClaudeBot",
-        allow: "/",
-      },
-      {
-        userAgent: "PerplexityBot",
-        allow: "/",
-      },
-      {
-        userAgent: "Applebot-Extended",
-        allow: "/",
-      },
-      {
-        userAgent: "anthropic-ai",
-        allow: "/",
-      },
-      {
-        userAgent: "Bytespider",
-        allow: "/",
-      },
-      {
-        userAgent: "cohere-ai",
-        allow: "/",
-      },
+      ...AI_CRAWLERS.map((bot) => ({
+        userAgent: bot,
+        allow: "/" as const,
+      })),
     ],
     sitemap: "https://www.originai.in/sitemap.xml",
   };

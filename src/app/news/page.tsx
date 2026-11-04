@@ -3,12 +3,15 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import PageShell from "../components/PageShell";
+import ArticleMeta from "../components/ArticleMeta";
+import { FADE_UP_SUBTLE } from "../lib/animations";
 
 /** News article entries. Add new items here as they are published. */
 const NEWS_ITEMS = [
   {
     slug: "sarvam-startup-program",
-    date: "August 2026",
+    dateTime: "2026-08",
+    dateLabel: "August 2026",
     tag: "Partnership",
     title: "Origin AI selected for Sarvam AI Startup Program",
     excerpt:
@@ -21,11 +24,7 @@ export default function NewsPage() {
     <PageShell>
       {/* ── Content ──────────────────────────── */}
       <section className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-8 md:px-12 pt-32 sm:pt-40 pb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+        <motion.div {...FADE_UP_SUBTLE} transition={{ duration: 0.8 }}>
           {/* Page heading */}
           <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight mb-4">
             Latest from Origin AI
@@ -40,14 +39,12 @@ export default function NewsPage() {
               <Link key={item.slug} href={`/news/${item.slug}`}>
                 <div className="liquid-glass rounded-2xl p-6 sm:p-8 md:p-10 hover:bg-white/[0.04] transition-colors duration-300">
                   {/* Meta row */}
-                  <div className="flex items-center gap-3 mb-4">
-                    <time dateTime="2026-08" className="text-[10px] sm:text-xs uppercase tracking-widest text-white/40">
-                      {item.date}
-                    </time>
-                    <span className="w-1 h-1 rounded-full bg-white/20" />
-                    <span className="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent text-[10px] sm:text-xs uppercase tracking-widest font-medium">
-                      {item.tag}
-                    </span>
+                  <div className="mb-4">
+                    <ArticleMeta
+                      dateTime={item.dateTime}
+                      dateLabel={item.dateLabel}
+                      tag={item.tag}
+                    />
                   </div>
 
                   {/* Title */}

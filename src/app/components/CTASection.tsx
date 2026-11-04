@@ -2,10 +2,38 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
+import { FADE_UP } from "../lib/animations";
+
+// ── Status config ─────────────────────────────────────────────────────
+
+type SubmitStatus = "idle" | "loading" | "success" | "error" | "exists";
+
+const BUTTON_STYLES: Record<SubmitStatus, string> = {
+  idle: "bg-black/60 hover:bg-black/80 text-white",
+  loading: "bg-black/60 text-white",
+  success: "bg-emerald-500/60 text-white",
+  error: "bg-red-500/60 text-white",
+  exists: "bg-amber-500/60 text-white",
+};
+
+const BUTTON_LABELS: Record<SubmitStatus, string> = {
+  idle: "Stay Notified",
+  loading: "...",
+  success: "✓ Subscribed",
+  error: "Try Again",
+  exists: "Already In!",
+};
+
+const MESSAGE_COLORS: Record<string, string> = {
+  success: "text-emerald-400",
+  error: "text-red-400",
+};
+
+// ── Component ─────────────────────────────────────────────────────────
 
 export default function CTASection() {
   const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error" | "exists">("idle");
+  const [status, setStatus] = useState<SubmitStatus>("idle");
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -48,8 +76,7 @@ export default function CTASection() {
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
+      {...FADE_UP}
       transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
       className="relative z-10 w-full flex flex-col items-center justify-center text-center px-4 mt-32 md:mt-64"
     >
@@ -78,25 +105,9 @@ export default function CTASection() {
         <button
           type="submit"
           disabled={status === "loading"}
-          className={`text-xs sm:text-sm font-bold uppercase tracking-[0.05em] sm:tracking-[0.15em] px-4 sm:px-8 py-3 sm:py-3.5 rounded-full transition-all whitespace-nowrap disabled:opacity-50 ${
-            status === "success"
-              ? "bg-emerald-500/60 text-white"
-              : status === "error"
-              ? "bg-red-500/60 text-white"
-              : status === "exists"
-              ? "bg-amber-500/60 text-white"
-              : "bg-black/60 hover:bg-black/80 text-white"
-          }`}
+          className={`text-xs sm:text-sm font-bold uppercase tracking-[0.05em] sm:tracking-[0.15em] px-4 sm:px-8 py-3 sm:py-3.5 rounded-full transition-all whitespace-nowrap disabled:opacity-50 ${BUTTON_STYLES[status]}`}
         >
-          {status === "loading"
-            ? "..."
-            : status === "success"
-            ? "✓ Subscribed"
-            : status === "exists"
-            ? "Already In!"
-            : status === "error"
-            ? "Try Again"
-            : "Stay Notified"}
+          {BUTTON_LABELS[status]}
         </button>
       </form>
 
@@ -105,13 +116,7 @@ export default function CTASection() {
         <motion.p
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          className={`mt-4 text-sm ${
-            status === "success"
-              ? "text-emerald-400"
-              : status === "error"
-              ? "text-red-400"
-              : "text-amber-400"
-          }`}
+          className={`mt-4 text-sm ${MESSAGE_COLORS[status] ?? "text-amber-400"}`}
         >
           {message}
         </motion.p>

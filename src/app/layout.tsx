@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import JsonLd from "./components/JsonLd";
+import {
+  organizationJsonLd,
+  websiteJsonLd,
+  navigationJsonLd,
+} from "./lib/structured-data";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -82,138 +87,6 @@ export const metadata: Metadata = {
   },
   manifest: "/manifest.json",
 };
-
-// ── Structured Data ───────────────────────────────────────────────────
-
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  additionalType: "https://schema.org/ResearchOrganization",
-  "@id": "https://www.originai.in/#organization",
-  name: "Origin AI",
-  alternateName: [
-    "Origin AI India",
-    "Origin AI Research",
-    "Origin AI Research Lab",
-    "originai.in",
-  ],
-  legalName: "Origin AI",
-  url: "https://www.originai.in",
-  logo: {
-    "@type": "ImageObject",
-    url: "https://www.originai.in/og-image.png",
-    width: 1200,
-    height: 630,
-  },
-  image: "https://www.originai.in/og-image.png",
-  description:
-    "Origin AI is an Indian AI research lab founded in 2025 by Megha Surya Bodepudi and Mahesh Bodepudi. Building safe general-purpose intelligence and foundational AI models from India, competing with the world's leading AI labs to advance India's leadership in the global AI race.",
-  foundingDate: "2025",
-  foundingLocation: {
-    "@type": "Place",
-    name: "India",
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "IN",
-    },
-  },
-  areaServed: {
-    "@type": "Country",
-    name: "India",
-  },
-  knowsAbout: [
-    "Artificial Intelligence",
-    "Artificial General Intelligence",
-    "Machine Learning",
-    "Deep Learning",
-    "Natural Language Processing",
-    "Computer Vision",
-    "AI Safety",
-    "Foundation Models",
-    "Large Language Models",
-  ],
-  knowsLanguage: ["en", "hi"],
-  founders: [
-    {
-      "@type": "Person",
-      "@id": "https://www.originai.in/#megha",
-      name: "Megha Surya Bodepudi",
-      jobTitle: "Co-Founder",
-      url: "https://www.originai.in/about",
-      sameAs: [
-        "https://www.linkedin.com/in/megha-surya-bodepudi-2b292b316/",
-      ],
-      worksFor: {
-        "@id": "https://www.originai.in/#organization",
-      },
-    },
-    {
-      "@type": "Person",
-      "@id": "https://www.originai.in/#mahesh",
-      name: "Mahesh Bodepudi",
-      jobTitle: "Co-Founder",
-      url: "https://www.originai.in/about",
-      sameAs: ["https://www.linkedin.com/in/maheshbodepudi/"],
-      worksFor: {
-        "@id": "https://www.originai.in/#organization",
-      },
-    },
-  ],
-  sameAs: [
-    "https://www.linkedin.com/company/originailabs/",
-    "https://www.linkedin.com/in/megha-surya-bodepudi-2b292b316/",
-    "https://www.linkedin.com/in/maheshbodepudi/",
-  ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    email: "megha@originai.in",
-    contactType: "general",
-  },
-};
-
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://www.originai.in/#website",
-  name: "Origin AI",
-  alternateName: ["Origin AI India", "originai.in"],
-  url: "https://www.originai.in",
-  publisher: {
-    "@id": "https://www.originai.in/#organization",
-  },
-  inLanguage: "en",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://www.google.com/search?q=site%3Aoriginai.in+{search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
-};
-
-const navigationJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "SiteNavigationElement",
-      name: "About Origin AI",
-      url: "https://www.originai.in/about",
-    },
-    {
-      "@type": "SiteNavigationElement",
-      name: "Origin AI Careers",
-      url: "https://www.originai.in/careers",
-    },
-    {
-      "@type": "SiteNavigationElement",
-      name: "Origin AI News",
-      url: "https://www.originai.in/news",
-    },
-  ],
-};
-
-// ── Layout ────────────────────────────────────────────────────────────
 
 export default function RootLayout({
   children,

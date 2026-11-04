@@ -7,35 +7,6 @@
   src: url("https://static.figma.com/font/GeistMono_wght__1") format("woff2");
 }
 
-/* ── Header Logo ─────────────────────────── */
-.nf-logo {
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  width: 233px;
-  height: 40px;
-  gap: 14px;
-}
-
-.nf-mark {
-  width: 54px;
-  height: 40px;
-  flex-shrink: 0;
-}
-
-.nf-logotype {
-  /* The logotype viewBox is 164.311 x 100, but the visible content is roughly
-     in the y-range 34–57 (height ~23). Scale so the logotype height matches
-     the mark height visually within the 40px frame. */
-  height: 40px;
-  width: auto;
-  flex-shrink: 0;
-}
-
 /* ── Centered 404 Content ────────────────── */
 .nf-content {
   position: absolute;
@@ -132,11 +103,6 @@
 
 /* ── Responsive: Mobile ──────────────────── */
 @media (max-width: 640px) {
-  .nf-logo {
-    top: 32px;
-    transform: translateX(-50%) scale(0.75);
-  }
-
   .nf-content {
     width: min(calc(100% - 40px), 360px);
     gap: 10px;

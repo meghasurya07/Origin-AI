@@ -3,17 +3,15 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import PageShell from "../../components/PageShell";
+import ArticleMeta from "../../components/ArticleMeta";
+import { FADE_UP_SUBTLE } from "../../lib/animations";
 
 export default function SarvamStartupProgramArticle() {
   return (
     <PageShell>
       {/* ── Article ──────────────────────────── */}
       <article className="relative z-10 w-full max-w-3xl mx-auto px-4 sm:px-8 md:px-12 pt-32 sm:pt-40 pb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+        <motion.div {...FADE_UP_SUBTLE} transition={{ duration: 0.8 }}>
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-xs text-white/30 mb-8">
             <Link href="/" className="hover:text-white/60 transition-colors">
@@ -31,17 +29,12 @@ export default function SarvamStartupProgramArticle() {
           </div>
 
           {/* Meta */}
-          <div className="flex items-center gap-3 mb-6">
-            <time
+          <div className="mb-6">
+            <ArticleMeta
               dateTime="2026-08"
-              className="text-[10px] sm:text-xs uppercase tracking-widest text-white/40"
-            >
-              August 2026
-            </time>
-            <span className="w-1 h-1 rounded-full bg-white/20" />
-            <span className="bg-gradient-to-r from-[#F97316] to-[#FBBF24] bg-clip-text text-transparent text-[10px] sm:text-xs uppercase tracking-widest font-medium">
-              Partnership
-            </span>
+              dateLabel="August 2026"
+              tag="Partnership"
+            />
           </div>
 
           {/* Headline */}

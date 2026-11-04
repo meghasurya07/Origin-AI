@@ -3,7 +3,9 @@
 import { motion } from "motion/react";
 import PageShell from "../components/PageShell";
 import SectionLabel from "../components/SectionLabel";
+import PillarGrid from "../components/PillarGrid";
 import { LinkedInFilledIcon, MailIcon } from "../components/Icons";
+import { FADE_UP, easeOutTransition } from "../lib/animations";
 
 // ── Data ──────────────────────────────────────────────────────────────
 
@@ -51,11 +53,7 @@ export default function AboutPage() {
     <PageShell>
       {/* ── Hero ─────────────────────────────── */}
       <section className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 pt-32 sm:pt-40 pb-16 sm:pb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
+        <motion.div {...FADE_UP} transition={easeOutTransition()}>
           <SectionLabel text="About Origin AI" />
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-tight">
             <span className="sr-only">Origin AI: </span>
@@ -70,9 +68,8 @@ export default function AboutPage() {
       {/* ── Mission ──────────────────────────── */}
       <section className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 pb-16 sm:pb-20">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+          {...FADE_UP}
+          transition={easeOutTransition(0.15)}
           className="liquid-glass rounded-2xl p-6 sm:p-10 md:p-12"
         >
           <h2 className="text-white text-xl sm:text-2xl font-semibold tracking-tight mb-4">
@@ -81,28 +78,13 @@ export default function AboutPage() {
           <p className="text-white/60 text-sm sm:text-base leading-relaxed mb-6">
             The race to AGI will define human progress, and Origin AI exists to ensure India leads this frontier rather than follows it. We are building safe, general-purpose intelligence and foundational models to transform industries and push the boundaries of what is possible, competing directly with the world&apos;s most ambitious labs.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-            {PILLARS.map((item) => (
-              <div key={item.label} className="border-t border-white/10 pt-4">
-                <p className="text-white text-sm font-semibold uppercase tracking-wider mb-2">
-                  {item.label}
-                </p>
-                <p className="text-white/50 text-xs sm:text-sm leading-relaxed">
-                  {item.value}
-                </p>
-              </div>
-            ))}
-          </div>
+          <PillarGrid items={PILLARS} />
         </motion.div>
       </section>
 
       {/* ── Founding Team ────────────────────── */}
       <section className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 pb-16 sm:pb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-        >
+        <motion.div {...FADE_UP} transition={easeOutTransition(0.3)}>
           <h2 className="text-white text-2xl sm:text-3xl font-semibold tracking-tight mb-8 sm:mb-10">
             Team
           </h2>

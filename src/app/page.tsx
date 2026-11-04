@@ -6,6 +6,7 @@ import CTASection from "./components/CTASection";
 import FooterWrapper from "./components/FooterWrapper";
 import BackgroundVideo from "./components/BackgroundVideo";
 import SectionLabel from "./components/SectionLabel";
+import PillarGrid from "./components/PillarGrid";
 
 // ── Data ──────────────────────────────────────────────────────────────
 
@@ -103,18 +104,7 @@ export default function Home() {
           <p className="text-white/60 text-sm sm:text-base leading-relaxed mb-6">
             Origin AI is an Indian AI research lab founded in 2025, building safe general-purpose intelligence and foundational AI models. Based in India, Origin AI is competing directly with the world&apos;s leading AI labs — including OpenAI and Anthropic — to advance India&apos;s leadership in the global AI race.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-            {ORIGIN_AI_PILLARS.map((pillar) => (
-              <div key={pillar.title} className="border-t border-white/10 pt-4">
-                <p className="text-white text-sm font-semibold uppercase tracking-wider mb-2">
-                  {pillar.title}
-                </p>
-                <p className="text-white/50 text-xs sm:text-sm leading-relaxed">
-                  {pillar.description}
-                </p>
-              </div>
-            ))}
-          </div>
+          <PillarGrid items={ORIGIN_AI_PILLARS} />
         </div>
       </section>
 
