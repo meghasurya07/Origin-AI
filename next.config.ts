@@ -26,16 +26,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  async redirects() {
-    return [
-      // ── Deleted article ─────────────────────────────
-      {
-        source: "/news/grad-capital-feather-grant",
-        destination: "/news",
-        permanent: true,
-      },
-    ];
-  },
 };
 
 export default nextConfig;
