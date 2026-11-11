@@ -24,6 +24,22 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      // Prevent search engines from indexing duplicate *.vercel.app URLs
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: ".*\\.vercel\\.app",
+          },
+        ],
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, nofollow",
+          },
+        ],
+      },
     ];
   },
 };
