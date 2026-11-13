@@ -17,7 +17,7 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: {
-    default: "Origin AI — Frontier AI Research Lab from India",
+    default: "Origin AI - Frontier AI Research Lab from India",
     template: "%s — Origin AI",
   },
   description:
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Origin AI — Frontier AI Research Lab from India | originai.in",
+    title: "Origin AI - Frontier AI Research Lab from India | originai.in",
     description:
       "Origin AI is an Indian AI research lab founded in 2025, building safe general-purpose intelligence and foundational AI models. Competing with OpenAI and Anthropic to advance India's leadership in the global AI race.",
     url: "https://www.originai.in",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Origin AI — Frontier AI Research Lab from India",
+        alt: "Origin AI - Frontier AI Research Lab from India",
       },
     ],
     locale: "en_IN",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Origin AI — Frontier AI Research Lab from India",
+    title: "Origin AI - Frontier AI Research Lab from India",
     description:
       "Indian AI research lab building safe general-purpose intelligence and foundational AI models. Founded 2025.",
     images: ["/og-image.png"],

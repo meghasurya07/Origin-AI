@@ -82,7 +82,7 @@ export default function Footer() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/Origin AI.png"
-              alt="Origin AI — Frontier AI Research Lab from India"
+              alt="Origin AI - Frontier AI Research Lab from India"
               width="600"
               height="400"
               className="h-40 w-auto -mt-14 -ml-14"

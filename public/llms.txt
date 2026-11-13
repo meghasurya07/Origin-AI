@@ -8,7 +8,7 @@
 
 ## Pages
 
-- [Home](https://www.originai.in): Origin AI — Frontier AI Research Lab from India
+- [Home](https://www.originai.in): Origin AI - Frontier AI Research Lab from India
 - [About](https://www.originai.in/about): Origin AI mission, team (Megha Surya Bodepudi & Mahesh Bodepudi), and vision
 - [Careers](https://www.originai.in/careers): Join Origin AI — build frontier AI from India
 - [News](https://www.originai.in/news): Origin AI announcements and milestones
