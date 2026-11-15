@@ -37,6 +37,8 @@ export default function CTASection() {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [message, setMessage] = useState("");
+  const [honeypot, setHoneypot] = useState("");
+  const [mountedAt] = useState(() => Date.now());
 
   useEffect(() => {
     captureUtmParams();
@@ -45,6 +47,13 @@ export default function CTASection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || status === "loading") return;
+
+    // Bot honeypot defense
+    if (honeypot.trim() !== "") {
+      setStatus("error");
+      setMessage("Submission could not be processed.");
+      return;
+    }
 
     // Instant client-side validation (syntax, test/fake emails, disposable domains, typos)
     const localCheck = await validateEmail(email, { checkDns: false });
@@ -61,11 +70,17 @@ export default function CTASection() {
     setStatus("loading");
 
     try {
+      const interactionTimeMs = Date.now() - mountedAt;
       const telemetry = getClientTelemetry();
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, ...telemetry }),
+        body: JSON.stringify({
+          email,
+          interactionTimeMs,
+          website_url: honeypot,
+          ...telemetry,
+        }),
       });
 
       const data = await res.json();
@@ -107,6 +122,17 @@ export default function CTASection() {
         onSubmit={handleSubmit}
         className="liquid-glass flex items-center w-full max-w-xl sm:max-w-2xl rounded-full pl-3 sm:pl-6 pr-1.5 py-1.5"
       >
+        {/* Anti-bot honeypot field - invisible to human users */}
+        <input
+          type="text"
+          name="website_url"
+          tabIndex={-1}
+          autoComplete="off"
+          value={honeypot}
+          onChange={(e) => setHoneypot(e.target.value)}
+          className="absolute -left-[9999px] opacity-0 pointer-events-none w-0 h-0"
+          aria-hidden="true"
+        />
         <label htmlFor="cta-email" className="sr-only">
           Email address
         </label>
