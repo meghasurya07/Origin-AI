@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { validateEmail } from "../../lib/email-validator";
 
 function getSupabase() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -149,11 +150,11 @@ export async function POST(request: Request) {
       );
     }
 
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    // Multi-layered email validation (syntax, test/placeholder blacklist, disposable domain, provider rules, DNS MX check)
+    const validation = await validateEmail(email, { checkDns: true });
+    if (!validation.valid) {
       return NextResponse.json(
-        { error: "Invalid email address" },
+        { error: validation.reason || "Please enter a valid, active email address." },
         { status: 400 }
       );
     }

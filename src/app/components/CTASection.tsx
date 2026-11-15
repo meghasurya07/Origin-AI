@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { FADE_UP } from "../lib/animations";
 import { captureUtmParams, getClientTelemetry } from "../lib/telemetry";
+import { validateEmail } from "../lib/email-validator";
 
 // ── Status config ─────────────────────────────────────────────────────
 
@@ -44,6 +45,18 @@ export default function CTASection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || status === "loading") return;
+
+    // Instant client-side validation (syntax, test/fake emails, disposable domains, typos)
+    const localCheck = await validateEmail(email, { checkDns: false });
+    if (!localCheck.valid) {
+      setStatus("error");
+      setMessage(localCheck.reason || "Please enter a valid email address.");
+      setTimeout(() => {
+        setStatus("idle");
+        setMessage("");
+      }, 4000);
+      return;
+    }
 
     setStatus("loading");
 
