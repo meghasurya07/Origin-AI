@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { FADE_UP } from "../lib/animations";
+import { captureUtmParams, getClientTelemetry } from "../lib/telemetry";
 
 // ── Status config ─────────────────────────────────────────────────────
 
@@ -36,6 +37,10 @@ export default function CTASection() {
   const [status, setStatus] = useState<SubmitStatus>("idle");
   const [message, setMessage] = useState("");
 
+  useEffect(() => {
+    captureUtmParams();
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || status === "loading") return;
@@ -43,10 +48,11 @@ export default function CTASection() {
     setStatus("loading");
 
     try {
+      const telemetry = getClientTelemetry();
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, ...telemetry }),
       });
 
       const data = await res.json();
