@@ -18,7 +18,7 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: {
     default: "Origin AI - Frontier AI Research Lab from India",
-    template: "%s — Origin AI",
+    template: "%s - Origin AI",
   },
   description:
     "Origin AI is an Indian AI research lab founded in 2025 by Megha Surya Bodepudi and Mahesh Bodepudi. Building safe general-purpose intelligence and foundational AI models from India, competing with OpenAI and Anthropic. Visit originai.in.",
