@@ -2,7 +2,6 @@
 
 import "./not-found.css";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import BackgroundVideo from "./components/BackgroundVideo";
 import { NOT_FOUND_VIDEOS } from "./lib/constants";
@@ -22,12 +21,12 @@ export default function NotFound() {
       {/* ── Logo ─────────────────────────────── */}
       <div className="absolute top-2 sm:top-3 md:top-5 -left-4 sm:-left-1 md:left-0 z-[2] overflow-hidden h-10 sm:h-14 md:h-20 flex items-center">
         <Link href="/">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/Origin AI.png"
             alt="Origin AI"
-            width={600}
-            height={400}
-            priority
+            width="600"
+            height="400"
             className="h-28 sm:h-36 md:h-48 w-auto -my-4 sm:-my-6 md:-my-8"
           />
         </Link>

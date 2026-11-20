@@ -33,7 +33,6 @@ export default function BackgroundVideo({
       autoPlay
       muted
       playsInline
-      preload="none"
       aria-hidden="true"
     />
   );

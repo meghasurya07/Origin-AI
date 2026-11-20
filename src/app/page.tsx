@@ -1,3 +1,5 @@
+"use client";
+
 import Navbar from "./components/Navbar";
 import SupportedBy from "./components/SupportedBy";
 import CTASection from "./components/CTASection";

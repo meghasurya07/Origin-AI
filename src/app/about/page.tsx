@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "motion/react";
 import PageShell from "../components/PageShell";
 import SectionLabel from "../components/SectionLabel";
@@ -69,9 +68,7 @@ export default function AboutPage() {
       {/* ── Mission ──────────────────────────── */}
       <section className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 pb-16 sm:pb-20">
         <motion.div
-          initial={FADE_UP.initial}
-          whileInView={FADE_UP.animate}
-          viewport={{ once: true, margin: "-50px" }}
+          {...FADE_UP}
           transition={easeOutTransition(0.15)}
           className="liquid-glass rounded-2xl p-6 sm:p-10 md:p-12"
         >
@@ -87,11 +84,7 @@ export default function AboutPage() {
 
       {/* ── Founding Team ────────────────────── */}
       <section className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-8 md:px-12 pb-16 sm:pb-20">
-        <motion.div
-          initial={FADE_UP.initial}
-          whileInView={FADE_UP.animate}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={easeOutTransition(0.3)}>
+        <motion.div {...FADE_UP} transition={easeOutTransition(0.3)}>
           <h2 className="text-white text-2xl sm:text-3xl font-semibold tracking-tight mb-8 sm:mb-10">
             Team
           </h2>
@@ -104,12 +97,12 @@ export default function AboutPage() {
                 className="liquid-glass rounded-2xl p-5 sm:p-6 flex flex-col items-center text-center gap-4"
               >
                 <div className="shrink-0 w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden ring-1 ring-white/10">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={member.image}
                     alt={member.name}
-                    width={200}
-                    height={200}
-                    loading="lazy"
+                    width="200"
+                    height="200"
                     className="w-full h-full object-cover"
                   />
                 </div>

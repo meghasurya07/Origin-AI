@@ -101,10 +101,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} antialiased`}>
+    <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
       <head>
-        <link rel="preconnect" href="https://d8j0ntlcm91z4.cloudfront.net" />
-        <link rel="dns-prefetch" href="https://d8j0ntlcm91z4.cloudfront.net" />
         <link rel="alternate" hrefLang="en-IN" href="https://www.originai.in" />
       </head>
       <body className="bg-black">

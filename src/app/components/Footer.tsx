@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "motion/react";
 import {
   XIcon,
@@ -71,8 +70,7 @@ export default function Footer() {
   return (
     <motion.footer
       initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
       className="liquid-glass font-helvetica w-full rounded-3xl p-6 md:p-10 text-white/70 mt-32 md:mt-64"
     >
@@ -81,12 +79,12 @@ export default function Footer() {
         {/* Brand Column */}
         <div className="md:col-span-5">
           <div className="mb-2 overflow-hidden h-12">
-            <Image
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src="/Origin AI.png"
               alt="Origin AI - Frontier AI Research Lab from India"
-              width={600}
-              height={400}
-              loading="lazy"
+              width="600"
+              height="400"
               className="h-40 w-auto -mt-14 -ml-14"
             />
           </div>
