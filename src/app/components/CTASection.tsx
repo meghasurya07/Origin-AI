@@ -110,7 +110,9 @@ export default function CTASection() {
 
   return (
     <motion.section
-      {...FADE_UP}
+      initial={FADE_UP.initial}
+      whileInView={FADE_UP.animate}
+      viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
       className="relative z-10 w-full flex flex-col items-center justify-center text-center px-4 mt-32 md:mt-64"
     >

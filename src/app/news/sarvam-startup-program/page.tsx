@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "motion/react";
 import PageShell from "../../components/PageShell";
 import ArticleMeta from "../../components/ArticleMeta";
@@ -43,12 +44,12 @@ export default function SarvamStartupProgramArticle() {
           </h1>
 
           {/* Hero image */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/Origin_AI_x_Sarvam.png"
             alt="Origin AI x Sarvam AI"
-            width="1456"
-            height="816"
+            width={1456}
+            height={816}
+            priority
             className="w-full rounded-2xl mb-10"
           />
 

@@ -6,7 +6,8 @@ export default function SupportedBy() {
   return (
     <motion.section
       initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 1, delay: 0.15, ease: "easeOut" }}
       className="relative z-10 w-full flex flex-col items-center justify-center text-center px-4 mt-28 sm:mt-40 md:mt-52"
     >
@@ -33,6 +34,7 @@ export default function SupportedBy() {
             alt="Sarvam AI"
             width="120"
             height="120"
+            loading="lazy"
             className="h-20 sm:h-24 md:h-[100px] w-auto opacity-90 group-hover:opacity-100 transition-opacity duration-300"
           />
         </a>

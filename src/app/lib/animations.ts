@@ -9,6 +9,13 @@ export const FADE_UP = {
   animate: { opacity: 1, y: 0 },
 } as const;
 
+/** whileInView version of FADE_UP for below-fold sections (avoids blocking scroll). */
+export const FADE_UP_IN_VIEW = {
+  initial: { opacity: 0, y: 30 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-50px" },
+} as const;
+
 /** Slightly subtler fade-up for article/news content. */
 export const FADE_UP_SUBTLE = {
   initial: { opacity: 0, y: 20 },

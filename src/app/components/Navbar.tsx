@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, X } from "lucide-react";
 
@@ -60,12 +61,12 @@ export default function Navbar() {
       {/* ── Left: Logo ─────────────────────────────── */}
       <div className="absolute top-2 sm:top-3 md:top-5 -left-4 sm:-left-1 md:left-0 z-30 overflow-hidden h-10 sm:h-14 md:h-20 flex items-center">
         <Link href="/">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="/Origin AI.png"
             alt="Origin AI - Frontier AI Research Lab from India"
-            width="600"
-            height="400"
+            width={600}
+            height={400}
+            priority
             className="h-28 sm:h-36 md:h-48 w-auto -my-4 sm:-my-6 md:-my-8"
           />
         </Link>
